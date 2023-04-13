@@ -26,18 +26,53 @@ SET time_zone = "+00:00";
 -- Structure de la table `item`
 --
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
+CREATE TABLE `testimony` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `message` TEXT(1000) NOT NULL,
+  `message_date` DATETIME NOT NULL,
+  `name` VARCHAR(55),
+  `email` varchar(100)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `image` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) NOT NULL,
+  `image_file` VARCHAR(255) NOT NULL,
+  `category_id` int
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `category` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `category_name` VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `admin` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `user_name` VARCHAR(55) NOT NULL,
+  `password` VARCHAR(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `service` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(55) NOT NULL,
+  `content_id` INT
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `content` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `bold_text` TEXT(1000) NULL,
+  `coloured_date` TEXT(1000) NULL,
+  `main_content` TEXT(1000) NULL,
+  `main_img` varchar(255),
+  `secondary_img` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `item`
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+INSERT INTO `testimony` (`message`) VALUES
+-- RAJOUTER AVEC FORMULAIRE
 
 --
 -- Index pour les tables exportées
