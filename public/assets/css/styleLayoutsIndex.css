@@ -1,0 +1,384 @@
+/* STUFF TO DELETE ONCE INSERTED INTO PROJECT */
+:root {
+    --black: #1a1a1a;
+    --beige: #e3c6a9;
+    --gray: #686464;
+    --white: #ffffff;
+    --green: #004f0d;
+    --brown: #3e2d22;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    /* police a mettre */
+    line-height: 1.5rem;
+}
+
+/* SWIPER CUSTOMIZATION SETTINGS */
+.swiper-button-prev, .swiper-button-next {
+    --swiper-navigation-color: var(--white);
+}
+
+.swiper-pagination-bullets {
+    --swiper-pagination-color: var(--beige);
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-inactive-color: var(--white);
+}
+
+
+@media screen and (width >=425px) {
+    .swiper-button-next, .swiper-button-prev {
+        left: 50%;
+        transform: rotate(90deg);
+        transform-origin: left center;
+        --swiper-navigation-size: 60px;
+    }
+
+    .swiper-button-prev {
+        top: 10px;
+        --swiper-navigation-color: var(--black);
+    }
+
+    .swiper-button-next {
+        top: auto;
+        bottom: 10px;
+        --swiper-navigation-color: var(--black);
+    }
+
+    .swiper-pagination-bullets {
+        --swiper-pagination-color: var(--black);
+        --swiper-pagination-bullet-size: 18px;
+        --swiper-pagination-bullet-inactive-color: var(--black);
+    }
+}
+
+/* MAIN MOBILE LAYOUT */
+
+.swiper {
+    height: 100vh;
+    width: 100%;
+}
+
+.boldTextContainer {
+    display: none;
+}
+
+.secondaryImgContainer {
+    display: none;
+}
+
+.mainImgContainer {
+    display: none;
+}
+
+div.swiper-slide section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column-reverse;
+    background-size: cover;
+}
+
+.subtitleContainer {
+    background-color: var(--black);
+    color: var(--beige);
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    padding-top: 15px;
+}
+
+.colouredTextContainer {
+    color: var(--beige);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 25%;
+    display: flex;
+    text-align: center;
+    font-weight: 800;
+    justify-content: center;
+    padding: 2% 5%;
+}
+
+.descriptionContainer {
+    color: var(--white);
+    margin: 0 11% 5% 11%;
+    padding: 3%;
+    text-align: center;
+}
+
+.galeryLinkContainer{
+    display: none;
+}
+
+a.galeryLink:link {
+    text-decoration: none;
+    color: var(--beige);
+}
+
+a.galeryLink:visited {
+    color: var(--beige);
+}
+
+/* MOBILE LAYOUT  VARIATIONS */
+
+/* MENUISERUE */
+
+div.swiper-slide section.menuiserie {
+    background-image: url(/assets/imgs/menuiseriePrimary.png);
+    background-position: right;
+}
+
+section.menuiserie div.colouredTextContainer {
+    background-color: var(--gray);
+}
+
+section.menuiserie div.descriptionContainer {
+    background-color: var(--black);
+}
+
+/* ESCALIER */
+
+div.swiper-slide section.escalier {
+    background-image: url(/assets/imgs/escalierPrimary.png);
+}
+
+section.escalier div.colouredTextContainer {
+    background-color: var(--gray);
+}
+
+section.escalier div.descriptionContainer {
+    background-color: var(--black);
+}
+
+/* EXTERIEUR */
+
+div.swiper-slide section.exterieur {
+    background-image: url(/assets/imgs/exterieurPrimary.jpg);
+    background-position: center;
+}
+
+section.exterieur div.colouredTextContainer {
+    background-color: var(--gray);
+}
+
+section.exterieur div.descriptionContainer {
+    background-color: var(--green);
+}
+
+/* EBENISTERIE */
+
+div.swiper-slide section.ebenisterie {
+    background-image: url(/assets/imgs/ebenisteriePrimary.jpg);
+    background-position: center;
+}
+
+section.ebenisterie div.colouredTextContainer {
+    background-color: var(--gray);
+}
+
+section.ebenisterie div.descriptionContainer {
+    background-color: var(--black);
+}
+
+/* AGENCEMENT */
+
+div.swiper-slide section.agencement {
+    background-image: url(/assets/imgs/agencementPrimary.png);
+    background-position: right;
+}
+
+section.agencement div.colouredTextContainer {
+    background-color: var(--gray);
+}
+
+section.agencement div.descriptionContainer {
+    background-color: var(--brown);
+}
+
+/* DESKTOP LAYOUTS */
+
+@media screen and (width >=425px) {
+
+    /* DISPLAY ACTIVATION OF HIDDEN ELEMENTS */
+    .boldTextContainer {
+        display: block;
+    }
+
+    .secondaryImgContainer {
+        display: block;
+    }
+
+    .mainImgContainer {
+        display: block;
+    }
+
+    /* REMOVAL OF BACKGROUND-IMGS */
+
+
+    div.swiper-slide section.menuiserie {
+        background-image: none;
+    }
+
+    div.swiper-slide section.escalier {
+        background-image: none;
+    }
+
+    div.swiper-slide section.exterieur {
+        background-image: none;
+    }
+
+    div.swiper-slide section.ebenisterie {
+        background-image: none;
+    }
+
+    div.swiper-slide section.agencement {
+        background-image: none;
+    }
+
+    /* removing original absolute positions */
+
+    .colouredTextContainer {
+        all: unset;
+    }
+
+    /* making everything fit the screen */
+
+    div.swiper-slide section {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 10%;
+    }
+
+    /* MENUISERIE, EXTERIEUR AND AGENCEMENT LAYOUT1 */
+
+    .subtitleContainer.layout1 {
+        all: unset;
+        position: absolute;
+        color: var(--beige);
+        font-size: 30px;
+        font-weight: 800;
+        top: 10%;
+        left: 12%;
+    }
+
+    .boldTextContainer.layout1  {
+        all: unset;
+        position: absolute;
+        top: 14%;
+        left: 10%;
+        width: 28%;
+        background: white;
+        background-image: radial-gradient(gray 1px, transparent 0);
+        background-size: 10px 10px;
+        background-position: 0 0;
+        z-index: -1;
+        font-size: 20px;
+        font-weight: 900;
+        padding: 3% 5% 7% 5%;
+    }
+
+    .colouredTextContainer.layout1  {
+        position: absolute;
+        top: 57%;
+        left: 32%;
+        padding: 3% 5% 3% 10%;
+        width: 20%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        color: var(--beige);
+        font-size: 30px;
+        font-weight: 900;
+        z-index: 1;
+    }
+
+    .descriptionContainer.layout1  {
+        position: absolute;
+        top: 8%;
+        right: -3%;
+        width: 17%;
+        padding-left: 10%;
+        height: 72%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainImgContainer.layout1  img {
+        position: absolute;
+        top: 12%;
+        left: 44%;
+        height: auto;
+        width: 25%;
+    }
+
+    .secondaryImgContainer.layout1  img {
+        position: absolute;
+        bottom: 13%;
+        left: 14%;
+        height: auto;
+        width: 20%;
+        z-index: 2;
+    }
+
+    .galeryLinkContainer.layout1  {
+        display: block;
+        color: var(--beige);
+        font-size: 40px;
+        z-index: 2;
+        position: absolute;
+        bottom: 15%;
+        right: 14%;
+    }
+
+    /* EBENISTERIE AND ESCALIER LAYOUT2 */
+
+    .subtitleContainer.layout2 {
+        all: unset;
+        position: absolute;
+        color: var(--beige);
+        font-size: 30px;
+        font-weight: 800;
+        top: 10%;
+        left: 8%;
+    }
+
+    .boldTextContainer.layout2  {
+        all: unset;
+        display: none;
+    }
+
+    .colouredTextContainer.layout2  {
+        all: unset;
+        display: none;
+    }
+
+    .descriptionContainer.layout2  {
+        all: unset;
+        display: none;
+    }
+
+    .mainImgContainer.layout2  img {
+        all: unset;
+        display: none;
+    }
+
+    .secondaryImgContainer.layout2  img {
+        all: unset;
+        display: none;
+    }
+
+    .galeryLinkContainer.layout2  {
+        all: unset;
+        display: none;
+    }
+}
