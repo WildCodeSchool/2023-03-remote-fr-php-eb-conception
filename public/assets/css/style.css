@@ -1,4 +1,5 @@
 /* main color variables */
+@import '_navbar.css';
 
 :root {
     --black: #1a1a1a;
