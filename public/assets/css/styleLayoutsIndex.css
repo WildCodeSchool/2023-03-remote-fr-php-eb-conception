@@ -109,10 +109,20 @@ div.swiper-slide section {
     color: var(--white);
     margin: 0 11% 5% 11%;
     padding: 3%;
-    text-align: center;
+    height: 30%;
 }
 
-.galeryLinkContainer{
+.descriptionContainer p {
+    display: -webkit-box !important;
+    text-align: center;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.galeryLinkContainer {
     display: none;
 }
 
@@ -124,6 +134,16 @@ a.galeryLink:link {
 a.galeryLink:visited {
     color: var(--beige);
 }
+
+/* MOBILE DESCRIPTION POP-UP */
+
+.descriptionContainer:click {
+    color: var(--white);
+    margin: 0 11% 5% 11%;
+    padding: 3%;
+    height: 30%;
+}
+
 
 /* MOBILE LAYOUT  VARIATIONS */
 
@@ -205,7 +225,7 @@ section.agencement div.descriptionContainer {
 
 @media screen and (width >=425px) {
 
-    /* DISPLAY ACTIVATION OF HIDDEN ELEMENTS */
+    /* ACTIVATION OF HIDDEN ELEMENTS */
     .boldTextContainer {
         display: block;
     }
@@ -269,7 +289,7 @@ section.agencement div.descriptionContainer {
         left: 12%;
     }
 
-    .boldTextContainer.layout1  {
+    .boldTextContainer.layout1 {
         all: unset;
         position: absolute;
         top: 14%;
@@ -285,7 +305,7 @@ section.agencement div.descriptionContainer {
         padding: 3% 5% 7% 5%;
     }
 
-    .colouredTextContainer.layout1  {
+    .colouredTextContainer.layout1 {
         position: absolute;
         top: 57%;
         left: 32%;
@@ -300,7 +320,7 @@ section.agencement div.descriptionContainer {
         z-index: 1;
     }
 
-    .descriptionContainer.layout1  {
+    .descriptionContainer.layout1 {
         position: absolute;
         top: 8%;
         right: -3%;
@@ -313,7 +333,7 @@ section.agencement div.descriptionContainer {
         align-items: center;
     }
 
-    .mainImgContainer.layout1  img {
+    .mainImgContainer.layout1 img {
         position: absolute;
         top: 12%;
         left: 44%;
@@ -321,7 +341,7 @@ section.agencement div.descriptionContainer {
         width: 25%;
     }
 
-    .secondaryImgContainer.layout1  img {
+    .secondaryImgContainer.layout1 img {
         position: absolute;
         bottom: 13%;
         left: 14%;
@@ -330,7 +350,7 @@ section.agencement div.descriptionContainer {
         z-index: 2;
     }
 
-    .galeryLinkContainer.layout1  {
+    .galeryLinkContainer.layout1 {
         display: block;
         color: var(--beige);
         font-size: 40px;
@@ -352,32 +372,32 @@ section.agencement div.descriptionContainer {
         left: 8%;
     }
 
-    .boldTextContainer.layout2  {
+    .boldTextContainer.layout2 {
         all: unset;
         display: none;
     }
 
-    .colouredTextContainer.layout2  {
+    .colouredTextContainer.layout2 {
         all: unset;
         display: none;
     }
 
-    .descriptionContainer.layout2  {
+    .descriptionContainer.layout2 {
         all: unset;
         display: none;
     }
 
-    .mainImgContainer.layout2  img {
+    .mainImgContainer.layout2 img {
         all: unset;
         display: none;
     }
 
-    .secondaryImgContainer.layout2  img {
+    .secondaryImgContainer.layout2 img {
         all: unset;
         display: none;
     }
 
-    .galeryLinkContainer.layout2  {
+    .galeryLinkContainer.layout2 {
         all: unset;
         display: none;
     }
