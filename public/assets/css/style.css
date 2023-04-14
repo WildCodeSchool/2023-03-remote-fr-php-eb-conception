@@ -1,5 +1,3 @@
-/* main color variables */
-
 :root {
     --black: #1a1a1a;
     --beige: #e3c6a9;
@@ -19,5 +17,6 @@ body {
     line-height: 1.5rem;
 }
 
-/* requires here */
-@import url(./styleLayoutsIndex.css);
+
+@import "/public/assets/css/accueil.css";
+@import "/public/assets/css/styleLayoutsIndex.css"
