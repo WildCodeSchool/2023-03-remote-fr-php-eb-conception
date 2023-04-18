@@ -359,7 +359,7 @@ section.agencement div.descriptionContainer {
         color: var(--beige);
         font-size: 30px;
         font-weight: 800;
-        top: 10%;
+        top: 8%;
         left: 12%;
     }
 
@@ -453,15 +453,15 @@ section.agencement div.descriptionContainer {
         color: var(--beige);
         font-size: 30px;
         font-weight: 800;
-        top: 10%;
+        top: 8%;
         right: 8%;
     }
 
     .boldTextContainer.layout2 {
         all: unset;
         position: absolute;
-        top: 40%;
-        left: 35%;
+        top: 37%;
+        left: 33%;
         width: 15%;
         line-height: 2rem;
         background: white;
@@ -502,7 +502,7 @@ section.agencement div.descriptionContainer {
         top: 8%;
         left: -3%;
         width: 17%;
-        padding-right: 10%;
+        padding-right: 5%;
         height: 72%;
         font-size: 20px;
         display: flex;
@@ -511,17 +511,66 @@ section.agencement div.descriptionContainer {
     }
 
     .mainImgContainer.layout2 img {
-        all: unset;
-        display: none;
+        position: absolute;
+        top: 14%;
+        left: 70%;
+        height: auto;
+        width: 18%;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
     .secondaryImgContainer.layout2 img {
-        all: unset;
-        display: none;
+        position: absolute;
+        bottom: 18%;
+        left: 30%;
+        height: auto;
+        max-height: 30%;
+        z-index: 2;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
     .galeryLinkContainer.layout2 {
         all: unset;
         display: none;
+    }
+
+    .backgroundBox1.layout2 {
+        position: absolute;
+        background-color: var(--black);
+        width: 10%;
+        height: 65%;
+        z-index: -5;
+        top: 14%;
+        right: 7%;
+    }
+
+    .backgroundBox2.layout2 {
+        position: absolute;
+        background-color: var(--black);
+        width: 28%;
+        height: 20%;
+        z-index: -5;
+        top: 60%;
+        right: 7%;
+    }
+
+    .highlightBox1.layout2 {
+        position: absolute;
+        background-color: var(--beige);
+        width: 2%;
+        height: 30%;
+        z-index: 1;
+        top: 33%;
+        right: 38%;
+    }
+
+    .highlightBox2.layout2 {
+        position: absolute;
+        background-color: var(--black);
+        width: 2%;
+        height: 30%;
+        z-index: 2;
+        top: 30%;
+        right: 37%;
     }
 }
