@@ -45,7 +45,7 @@ body {
 
     .swiper-button-next {
         top: auto;
-        bottom: 10px;
+        bottom: 12%;
         --swiper-navigation-color: var(--black);
     }
 
