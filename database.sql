@@ -61,7 +61,7 @@ CREATE TABLE `service` (
 CREATE TABLE `content` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `bold_text` TEXT(1000) NULL,
-  `coloured_date` TEXT(1000) NULL,
+  `coloured_text` TEXT(1000) NULL,
   `main_content` TEXT(1000) NULL,
   `main_img` varchar(255),
   `secondary_img` varchar(255)
@@ -71,7 +71,6 @@ CREATE TABLE `content` (
 -- Contenu de la table `item`
 --
 
-INSERT INTO `testimony` (`message`) VALUES
 -- RAJOUTER AVEC FORMULAIRE
 
 --
@@ -81,8 +80,7 @@ INSERT INTO `testimony` (`message`) VALUES
 --
 -- Index pour la table `item`
 --
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- AUTO_INCREMENT pour les tables exportées

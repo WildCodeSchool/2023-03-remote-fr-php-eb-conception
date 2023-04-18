@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+{% endblock %}
+
+{% block content %}
+<main>
+	<form action="" method="post">
+		<h1>Admin content form</h1>
+
+
+		<div>
+			<label for="bold_text">Black and white bold text</label>
+			<textarea type="text" name="bold_text" id="bold_text" rows="5" placeholder="Bold text"></textarea>
+		</div>
+
+		<div>
+			<label for="coloured_text">Coloured Text</label>
+			<textarea type="text" name="coloured_text" id="coloured_text" rows="5" placeholder="Coloured text"></textarea>
+		</div>
+
+
+		<div>
+			<label for="main_content">Main description</label>
+			<textarea type="text" id="main_content" name="main_content" rows="5" placeholder="Description text"></textarea>
+		</div>
+
+		<div>
+			<label for="main_img">Main img link</label>
+			<textarea type="text" id="main_img" name="main_img" rows="2" placeholder="Image Link"></textarea>
+		</div>
+
+		<div>
+			<label for="secondary_img">Secondary img link</label>
+			<textarea type="text" id="secondary_img" name="secondary_img" rows="2" placeholder="Image Link"></textarea>
+		</div>
+
+		<button type="submit">envoyer</button>
+	</form>
+</main>
+{% endblock %}
