@@ -39,7 +39,7 @@ body {
     }
 
     .swiper-button-prev {
-        top: 10px;
+        top: 3%;
         --swiper-navigation-color: var(--black);
     }
 
@@ -369,6 +369,7 @@ section.agencement div.descriptionContainer {
         top: 14%;
         left: 10%;
         width: 28%;
+        line-height: 2rem;
         background: white;
         background-image: radial-gradient(gray 1px, transparent 0);
         background-size: 10px 10px;
@@ -379,7 +380,7 @@ section.agencement div.descriptionContainer {
         padding: 3% 5% 7% 5%;
     }
 
-    .boldTextContainer p {
+    .boldTextContainer.layout1 p {
         background-color: white;
         color: var(--black);
         display: inline;
@@ -421,6 +422,7 @@ section.agencement div.descriptionContainer {
         left: 44%;
         height: auto;
         width: 25%;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
     .secondaryImgContainer.layout1 img {
@@ -430,6 +432,7 @@ section.agencement div.descriptionContainer {
         height: auto;
         width: 20%;
         z-index: 2;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
     .galeryLinkContainer.layout1 {
@@ -451,22 +454,60 @@ section.agencement div.descriptionContainer {
         font-size: 30px;
         font-weight: 800;
         top: 10%;
-        left: 8%;
+        right: 8%;
     }
 
     .boldTextContainer.layout2 {
         all: unset;
-        display: none;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        width: 15%;
+        line-height: 2rem;
+        background: white;
+        background-image: radial-gradient(gray 1px, transparent 0);
+        background-size: 10px 10px;
+        background-position: 0 0;
+        z-index: -1;
+        font-size: 25px;
+        font-weight: 900;
+        padding: 3% 5% 8% 5%;
+    }
+
+    .boldTextContainer.layout2 p {
+        background-color: white;
+        color: var(--black);
+        display: inline;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
     }
 
     .colouredTextContainer.layout2 {
-        all: unset;
-        display: none;
+        position: absolute;
+        top: 17%;
+        left: 25%;
+        padding: 3% 15% 3% 15%;
+        width: 20%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        color: var(--beige);
+        font-size: 30px;
+        font-weight: 900;
+        z-index: 0;
     }
 
     .descriptionContainer.layout2 {
-        all: unset;
-        display: none;
+        position: absolute;
+        top: 8%;
+        left: -3%;
+        width: 17%;
+        padding-right: 10%;
+        height: 72%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .mainImgContainer.layout2 img {
