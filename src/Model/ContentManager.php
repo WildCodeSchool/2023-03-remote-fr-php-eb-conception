@@ -14,7 +14,8 @@ class ContentManager extends AbstractManager
 
     public function insert(array $content): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`bold_text`, `coloured_text`, `main_content`, `main_img`, `secondary_img`)
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
+        " (`bold_text`, `coloured_text`, `main_content`, `main_img`, `secondary_img`)
         VALUES (:bold_text, :coloured_text, :main_content, :main_img, :secondary_img)");
         $statement->bindValue('bold_text', $content['bold_text'], \PDO::PARAM_STR);
         $statement->bindValue('coloured_text', $content['coloured_text'], \PDO::PARAM_STR);
