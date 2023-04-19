@@ -6,5 +6,5 @@ db.php
 .idea
 .vscode
 config\db.php
-/src/Controller/ContentContoller.php
-/src/View/Content/
+src/Controller/ContentContoller.php
+src/View/Content/
