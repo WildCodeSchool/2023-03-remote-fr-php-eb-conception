@@ -34,7 +34,6 @@ class ContentController extends AbstractController
                 return null;
             }
         }
-        return $this->twig->render('Content/content.html.twig',
-        ['content' => $content]);
+        return $this->twig->render('Content/content.html.twig');
     }
 }

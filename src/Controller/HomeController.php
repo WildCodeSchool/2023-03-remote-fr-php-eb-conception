@@ -18,11 +18,11 @@ class HomeController extends AbstractController
         $cabinetMaking = $contentManager->selectOneById(4);
         $layout = $contentManager->selectOneById(5);
         return $this->twig->render('Home/index.html.twig', [
-        'carpentry'=>$carpentry,
-        'stairs'=>$stairs,
-        'exterior'=>$exterior,
-        'cabinetMaking'=>$cabinetMaking,
-        'layout'=>$layout
+        'carpentry' => $carpentry,
+        'stairs' => $stairs,
+        'exterior' => $exterior,
+        'cabinetMaking' => $cabinetMaking,
+        'layout' => $layout
         ]);
     }
 }
