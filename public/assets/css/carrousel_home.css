@@ -1,0 +1,35 @@
+.mySwiper-home {
+    margin-top: 35%;
+    width: 16rem;
+    height: 5rem;
+  }
+
+.swiper-scrollbar {
+    height: .3rem;
+    background-color: var(--black);
+  }
+
+  .slide-swiper {
+
+    background-color: var(--beige) ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    opacity: 70%;
+    cursor: pointer;
+    line-height: 1.7rem;
+    font-size: 16px;
+  }
+
+
+  .swiper-title-home{
+    color: var(--brown);
+    padding-left: 5px;
+  }
+
+  .swiper-comment-home{
+    color: var(--black);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
