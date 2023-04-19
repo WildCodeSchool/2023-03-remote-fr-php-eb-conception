@@ -25,6 +25,18 @@ class ContentController extends AbstractController
                 $errors[] = "Le champ Colored text est obligatoire";
             }
 
+            if (empty($content['main_content'])) {
+                $errors[] = "Le champ Main content est obligatoire";
+            }
+
+            if (empty($content['main_img'])) {
+                $errors[] = "Le champ Main img link est obligatoire";
+            }
+
+            if (empty($content['secondary_img'])) {
+                $errors[] = "Le champ Secondary img link est obligatoire";
+            }
+
             if (empty($errors)) {
                 $contentManager = new ContentManager();
                 $contentManager->insert($content);
