@@ -1,4 +1,4 @@
-var swiper = new Swiper_home(".mySwiper-home",{
+var swiper_home = new Swiper (".mySwiper-home",{
     scrollbar: {
       el: ".swiper-scrollbar",
     },

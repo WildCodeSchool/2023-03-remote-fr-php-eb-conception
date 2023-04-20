@@ -1,21 +1,22 @@
 .mySwiper-home {
-    margin-top: 35%;
-    width: 16rem;
-    height: 5rem;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    right: 25%;
+    overflow: hidden;
   }
 
-.swiper-scrollbar {
+.swiper-scrollbar-drag {
     height: .3rem;
     background-color: var(--black);
   }
 
   .slide-swiper {
-
     background-color: var(--beige) ;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    opacity: 70%;
+    opacity: 80%;
     cursor: pointer;
     line-height: 1.7rem;
     font-size: 16px;
@@ -32,4 +33,14 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-bottom: 12px;
+  }
+
+  @media screen and (max-width: 900px){
+    .mySwiper-home {
+        top: 65%;
+        left: 20%;
+        right: 20%;
+      }
+
   }
