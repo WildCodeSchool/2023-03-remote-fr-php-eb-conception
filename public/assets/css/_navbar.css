@@ -1,0 +1,256 @@
+.headerfornav {
+    background-color: var(--black);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 666;
+}
+
+/*modif images*/
+.header__logo img {
+    max-height: 70px;
+}
+
+.header__nav__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.header__nav__menu__link {
+    margin-right: 1rem;
+}
+
+
+.headerfornav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px 10px;
+
+}
+
+.headerfornav li>a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.headerfornav li>a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.headerfornav li>a:hover::after {
+    width: 100%;
+    background: var(--beige);
+}
+
+
+.header__nav__menu__link a {
+    color: var(--beige);
+    font-family: 'Arial';
+    font-weight: 250;
+    text-decoration: none;
+    margin: 0 0 0 0;
+}
+
+.header__nav__menu__link a:hover {
+    width: 100%;
+    left: 0;
+    z-index: 667;
+    padding: 0;
+}
+
+.header__nav__menu__link ul li {
+    display: none;
+    background-color: var(--black);
+}
+
+.headerfornav:hover ul li,
+.header__nav__menu__link .primarylink:focus+ul>li,
+.header__nav__menu__link .primarylink1:focus+ul>li {
+    display: block;
+}
+
+
+
+.header__nav__menu__underlink {
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -30px;
+    max-height: 30px;
+    z-index: 666;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__burger svg {
+    background-color: var(--beige);
+    stroke: var(--white);
+    margin-left: 1rem;
+    width: 40px;
+    height: 40px;
+}
+
+.header__nav__close {
+    display: none;
+}
+
+
+@media screen and (max-width: 425px) {
+    .headerfornav {
+        background-color: transparent;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    .header__logo img {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .headerfornav li>a {
+        width: 97%;
+        font-size: 26px;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .header__nav.open {
+        display: flex;
+        animation: transformMenu 300ms ease-in-out forwards;
+        background-color: var(--black);
+        opacity: 95%;
+    }
+
+    @keyframes transformMenu {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+    .header__nav__menu {
+        display: block;
+        width: 100%;
+    }
+
+    .header__nav__menu__link {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .header__nav__menu__link a {
+        font-size: 1.25rem;
+        color: var(--beige);
+        padding: 0.3rem;
+    }
+
+    .headerfornav li {
+        margin: 1rem;
+    }
+
+    .primarylink,
+    .primarylink1 {
+        background-color: var(--black);
+        border-radius: 10px;
+    }
+
+    .secondarylink {
+        background-color: var(--black);
+        border-radius: 10px;
+    }
+
+    .header__nav__close {
+        display: block;
+        cursor: pointer;
+    }
+
+
+    .header__nav__close svg {
+        stroke: var(--white);
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .overlay-menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        opacity: 0.5;
+        display: none;
+    }
+
+    .overlay-menu-mobile.open {
+        display: block;
+    }
+
+    .header__nav__menu__underlink {
+        background-color: var(--black);
+        position: inherit;
+        left: 0;
+        width: auto;
+        max-height: none;
+        z-index: 666;
+        transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+
+    .header__nav__menu__link ul li {
+        background-color: transparent;
+        padding: 0;
+    }
+}

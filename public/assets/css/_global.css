@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+
+}
+
+body {
+    box-sizing: border-box;
+    /* police a mettre */
+    line-height: 1.5rem;
+}
+

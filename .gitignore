@@ -5,3 +5,6 @@
 db.php
 .idea
 .vscode
+config\db.php
+src\Controller\ContentController.php
+src\View\Content\
