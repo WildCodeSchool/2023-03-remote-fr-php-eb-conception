@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*MAIN CONTAINER*/
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    height: 100vh;
+    
+}
+
+/* IMAGE EBENISTE */
+.img-contact {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 37%;
+    z-index: -7;
+  }
+
+/*BLOCK CENTRE POUR NOUS JOINDRE*/
+
+body.contactBody {
+    background-color: #D9D9D9;
+    font-size: 12px;
+  }
+  
+  body.contactBody, button.app-form-button, input {
+    font-family: 'Iceland';
+    font-weight: 25px;
+    letter-spacing: 1.4px;
+  }
+
+  .container {
+    margin-top: 50%;
+    padding: 0;
+    width: 40rem;
+  }
+  
+  .screen {
+    position: relative;
+    background: #353434;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    z-index: -1;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #E3C6A9;
+    font-family: "Iceland";
+    font-size: 40px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 65px;
+    height: 4px;
+    background: #f8cf95;
+  }
+  
+  .app-form-group {
+    margin-bottom: 5px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #E3C6A9;
+    color: #E3C6A9;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #E3C6A9;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #E3C6A9;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #E3C6A9;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #eadacc;
+  }
+
+  @media screen and (width >=425px) {
+    
+  }
+  
+
+  /*BLOCK DROITE INFO CONTACT*/
+
+  section.right-contact {
+    display: flex;
+    width: 26%;
+    height: 100%;
+    background-color: #686464;
+    justify-content: center;
+    align-items: center;
+    color: #E3C6A9;
+    
+  }
+
+  .right-r-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
