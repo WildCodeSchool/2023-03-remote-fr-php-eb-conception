@@ -7,6 +7,8 @@
 {% block stylesheet %}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="/assets/css/home.css"/>
+	<link rel="stylesheet" href="/assets/css/carrousel_home.css"/>
+
 {% endblock %}
 
 {% block content %}
@@ -26,8 +28,37 @@
 						</div>
 
 						<div class="logoContainer">
-							<img class="logo fb" src="/assets/imgs/fb_logo.png" alt="logo facebook">
-							<img class="logo twitter" src="/assets/imgs/twitter_logo.png" alt="logo twitter">
+							<a href="https://www.facebook.com/">
+								<img class="logo fb" src="/assets/imgs/fb_logo.png" alt="logo facebook">
+							</a>
+							<a href="https://www.twitter.com/">
+								<img class="logo twitter" src="/assets/imgs/twitter_logo.png" alt="logo twitter">
+							</a>
+						</div>
+
+						<!-- Swiper-home -->
+						<div class="swiper1 mySwiper-home">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slide-swiper">
+									<h3 class="swiper-title-home">Emilienne</h3>
+									<p class="swiper-comment-home">
+										<b>"</b>Christophe est à l'écoute des clients, très disponible et très sérieux.<b>"</b>
+									</p>
+								</div>
+								<div class="swiper-slide slide-swiper">
+									<h3 class="swiper-title-home">Maurice</h3>
+									<p class="swiper-comment-home">
+										<b>"</b>Je recommande EB Conception. Christophe s'adapte à la demande des clients.<b>"</b>
+									</p>
+								</div>
+								<div class="swiper-slide slide-swiper">
+									<h3 class="swiper-title-home">Raymonde</h3>
+									<p class="swiper-comment-home">
+										<b>"</b>Très professionnel, les délais du chantier ont été respectés. Les finitions sont parfaites.<b>"</b>
+									</p>
+								</div>
+							</div>
+							<div class="swiper-scrollbar"></div>
 						</div>
 
 					</section>
@@ -44,32 +75,26 @@
 
 						<div class="boldTextContainer layout1">
 							<p>
-								JE VOUS ACCOMPAGNE DANS VOS PROJETS EN VOUS APPORTANT MON EXPERTISE
+								{{ carpentry.bold_text }}
 							</p>
 						</div>
 
 						<div class="colouredTextContainer layout1">
-							UN SAVOIR FAIRE CLASSIQUE MODERNISÉ
+							{{ carpentry.coloured_text }}
 						</div>
 
 						<div class="descriptionContainer layout1">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								<br>
-								<br>
-								Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								<br>
-								<br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia eserunt mollit anim id est laborum.
+								{{ carpentry.main_content }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/menuiseriePrimary.png" alt="">
+							<img src="/assets/imgs/{{ carpentry.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/menuiserieSecondary.png" alt="">
+							<img src="/assets/imgs/{{ carpentry.secondary_img }}" alt="">
 
 						</div>
 
@@ -92,37 +117,26 @@
 
 						<div class="boldTextContainer layout2">
 							<p>
-								STAIRWAYS TO HEAVEN AND BACK
+								{{ stairs.bold_text }}
 							</p>
 						</div>
 
 						<div class="colouredTextContainer layout2">
-							DES TRAVAUX FAIT SUR MESURE POUR VOTRE QUOTIDIEN
+							{{ stairs.coloured_text }}
 						</div>
 
 						<div class="descriptionContainer layout2">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-																																																																																																																																				incididunt ut labore et dolore magna aliqua.
-								<br>
-								<br>
-								Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris
-																																																																																																																																				 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-																																																																																																																																					voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								<br>
-								<br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-																																																																																																																																				 deserunt mollit anim id est laborum.
+								{{ carpentry.main_content }}
 							</p>
-
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/escalierPrimary.png" alt="">
+							<img src="/assets/imgs/{{ stairs.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/escalierSecondary.png" alt="">
+							<img src="/assets/imgs/{{ stairs.secondary_img }}" alt="">
 
 						</div>
 
@@ -134,9 +148,9 @@
 
 						<div class="backgroundBox2 layout2"></div>
 
-                        <div class="highlightBox1 layout2"></div>
+						<div class="highlightBox1 layout2"></div>
 
-                        <div class="highlightBox2 layout2"></div>
+						<div class="highlightBox2 layout2"></div>
 
 					</section>
 				</div>
@@ -153,37 +167,27 @@
 
 						<div class="boldTextContainer layout1">
 							<p>
-								VOS EXTÉRIEURS SOIGNÉS POUR SE SENTIR COMME A LA MAISON
+								{{ exterior.bold_text }}
 							</p>
 						</div>
 
 						<div class="colouredTextContainer layout1">
-							MODERNISEZ ET AMENAGEZ VOS EXTERIEURS
+							{{ exterior.coloured_text }}
 						</div>
 
 						<div class="descriptionContainer layout1">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-																																																																																																																																				incididunt ut labore et dolore magna aliqua.
-								<br>
-								<br>
-								Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris
-																																																																																																																																				 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-																																																																																																																																					voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								<br>
-								<br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-																																																																																																																																				 deserunt mollit anim id est laborum.
+								{{ exterior.main_content }}
+								deserunt mollit anim id est laborum.
 							</p>
-
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/exterieurPrimary.jpg" alt="">
+							<img src="/assets/imgs/{{ exterior.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/exterieurSecondary.jpg" alt="">
+							<img src="/assets/imgs/{{ exterior.secondary_img }}" alt="">
 
 						</div>
 
@@ -207,50 +211,39 @@
 
 						<div class="boldTextContainer layout2">
 							<p>
-								A PLACE TO STAY
+								{{ cabinetMaking.bold_text }}
 							</p>
 						</div>
 
 						<div class="colouredTextContainer layout2">
-							SAVOIR EBENER, C'EST TOUCHER LE SOURIRE DES DIEUX
+							{{ cabinetMaking.coloured_text }}
 						</div>
 
 						<div class="descriptionContainer layout2">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-																																																																																																																																				incididunt ut labore et dolore magna aliqua.
-								<br>
-								<br>
-								Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris
-																																																																																																																																				 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-																																																																																																																																					voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								<br>
-								<br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-																																																																																																																																				 deserunt mollit anim id est laborum.
+								{{ cabinetMaking.main_content }}
 							</p>
-
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/ebenisteriePrimary.jpg" alt="">
+							<img src="/assets/imgs/{{ cabinetMaking.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/ebenisterieSecondary.jpg" alt="">
+							<img src="/assets/imgs/{{ cabinetMaking.secondary_img }}" alt="">
 						</div>
 
 						<div class="galeryLinkContainer layout2">
 							<a class="galeryLink" href="">Galerie...</a>
 						</div>
 
-                        <div class="backgroundBox1 layout2"></div>
+						<div class="backgroundBox1 layout2"></div>
 
 						<div class="backgroundBox2 layout2"></div>
 
-                        <div class="highlightBox1 layout2"></div>
+						<div class="highlightBox1 layout2"></div>
 
-                        <div class="highlightBox2 layout2"></div>
+						<div class="highlightBox2 layout2"></div>
 
 					</section>
 
@@ -267,37 +260,26 @@
 
 						<div class="boldTextContainer layout1">
 							<p>
-								UNE MAISON AGENCÉ EST UNE MAISON POUR LA VIE
+								{{ layout.bold_text }}
 							</p>
 						</div>
 
 						<div class="colouredTextContainer layout1">
-							UN AGENCEMENT MAÎTRISÉ POUR UNE VIE PROSPERE
+							{{ layout.coloured_text }}
 						</div>
 
 						<div class="descriptionContainer layout1">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-																																																																																																																																				incididunt ut labore et dolore magna aliqua.
-								<br>
-								<br>
-								Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris
-																																																																																																																																				 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-																																																																																																																																					voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								<br>
-								<br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-																																																																																																																																				 deserunt mollit anim id est laborum.
+								{{ layout.main_content }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
 							</p>
-
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/agencementPrimary.png" alt="">
+							<img src="/assets/imgs/{{ layout.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/agencementSecondary.png" alt="">
+							<img src="/assets/imgs/{{ layout.secondary_img }}" alt="">
 
 						</div>
 
@@ -322,5 +304,7 @@
 		</div>
 	</div>
 </main>{% endblock %}{% block javascript %}
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="/assets/js/scriptSwiperIndex.js"></script>{% endblock %}
+<script src="/assets/js/scriptSwiperIndex.js"></script>
+<script src="/assets/js/carrousel_home.js"></script>{% endblock %}

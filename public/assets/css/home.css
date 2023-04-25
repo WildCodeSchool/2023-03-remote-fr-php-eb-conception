@@ -427,7 +427,9 @@ section.agencement div.descriptionContainer {
 
 /* DESKTOP LAYOUTS */
 
+
 @media screen and (width >= 1028px) {
+
 
     /* ACTIVATION OF HIDDEN ELEMENTS */
     .boldTextContainer {
