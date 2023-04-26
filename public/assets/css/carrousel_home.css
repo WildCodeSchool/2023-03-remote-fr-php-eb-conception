@@ -1,0 +1,46 @@
+.mySwiper-home {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    right: 25%;
+    overflow: hidden;
+  }
+
+.swiper-scrollbar-drag {
+    height: .3rem;
+    background-color: var(--black);
+  }
+
+  .slide-swiper {
+    background-color: var(--beige) ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    opacity: 80%;
+    cursor: pointer;
+    line-height: 1.7rem;
+    font-size: 16px;
+  }
+
+
+  .swiper-title-home{
+    color: var(--brown);
+    padding-left: 5px;
+  }
+
+  .swiper-comment-home{
+    color: var(--black);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  @media screen and (max-width: 900px){
+    .mySwiper-home {
+        top: 65%;
+        left: 20%;
+        right: 20%;
+      }
+
+  }
