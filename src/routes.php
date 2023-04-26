@@ -9,6 +9,7 @@
 return [
     '' => ['HomeController', 'index',],
     'testimony' => ['TestimonyController', 'testimony'],
+    'recep' => ['RecepController', 'recep'],
     'content' => ['ContentController', 'add',],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
