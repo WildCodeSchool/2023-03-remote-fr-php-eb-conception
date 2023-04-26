@@ -6,11 +6,11 @@ use App\Model\TestimonyManager;
 
 class TestimonyController extends AbstractController
 {
-    public function TestionyController(int $id): string
+    public function testimony(): string
     {
         $testimonyManager = new TestimonyManager();
-        $testimony = $testimonyManager->selectOneById($id);
+        $testimonies = $testimonyManager->selectAll();
 
-        return $this->twig->render('Home/testimony.html.twig', ['testimony' => $testimony]);
+        return $this->twig->render('Home/testimony.html.twig', ['testimonies' => $testimonies]);
     }
 }
