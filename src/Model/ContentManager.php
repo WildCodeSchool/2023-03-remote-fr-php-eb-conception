@@ -38,5 +38,4 @@ class ContentManager extends AbstractManager
 
         return $statement->execute();
     }
-
 }
