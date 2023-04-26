@@ -13,6 +13,7 @@ class AdminController extends AbstractController
 
             $adminManager = new AdminManager();
             $admin = $adminManager->selectOneByUsername($credentials['username']);
+
             if ($admin && password_verify($credentials['password'], $admin['password'])) {
                 $_SESSION['admin_id'] = $admin['id'];
                 header('Location: /');

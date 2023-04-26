@@ -21,7 +21,7 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
 
         // when window width is >= 640px
-        425: {
+        1028: {
             direction: 'vertical',
         }
 

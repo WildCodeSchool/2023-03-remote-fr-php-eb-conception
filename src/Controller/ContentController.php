@@ -48,4 +48,12 @@ class ContentController extends AbstractController
         }
         return $this->twig->render('Content/content.html.twig');
     }
+
+    public function showContent()
+    {
+        $contentManager = new ContentManager();
+        $content = $contentManager->selectAll();
+
+        return $this->twig->render('Content/showContent.html.twig', ['content' => $content]);
+    }
 }

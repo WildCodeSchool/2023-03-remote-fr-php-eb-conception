@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+{% endblock %}
+
+{% block content %}
+	<main>
+
+		<h1>All Content</h1>
+
+
+		<ul>
+			{% for item in content %}
+				<li>
+					<h2>{{ item.title }}</h2>
+					<p>{{ item.bold_text }}</p>
+					<p>{{ item.coloured_text }}</p>
+					<p>{{ item.main_content }}</p>
+					<div class="pico-image-wrapper">
+						<img class="pico-image" src="/assets/imgs/{{ item.main_img }}" alt="">
+					</div>
+					<div class="pico-image-wrapper">
+						<img class="pico-image" src="/assets/imgs/{{ item.secondary_img }}" alt="">
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</main>
+{% endblock %}
