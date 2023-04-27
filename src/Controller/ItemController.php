@@ -20,12 +20,12 @@ class ItemController extends AbstractController
     /**
      * Show informations for a specific item
      */
-    public function livreDor(int $id): string
+    public function show(int $id): string
     {
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);
 
-        return $this->twig->render('Item/livreDor.html.twig', ['item' => $item]);
+        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
     }
 
     /**

@@ -163,7 +163,7 @@ div.swiper-slide section {
 
 .descriptionContainer p {
     display: -webkit-box !important;
-    text-align: center;
+    text-align: left;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
@@ -318,7 +318,7 @@ section.agencement div.descriptionContainer {
 
     .descriptionContainer p {
         all: unset;
-        text-align: center;
+        text-align: left;
     }
 
     /* making everything fit the screen */

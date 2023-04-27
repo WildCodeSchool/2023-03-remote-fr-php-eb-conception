@@ -56,4 +56,25 @@ class ContentController extends AbstractController
 
         return $this->twig->render('Content/showContent.html.twig', ['content' => $content]);
     }
+
+    /**
+     * Edit a specific item
+     */
+    public function editContent(int $id): ?string
+    {
+        $contentManager = new ContentManager();
+        $content = $contentManager->selectOneById($id);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST')
+        {
+            $content = array_map('trim', $_POST);
+            $contentManager->update($content);
+
+            header('Location: /showContent');
+            return null;
+        }
+        return $this->twig->render('Content/editContent.html.twig', [
+            'content' => $content,
+        ]);
+    }
 }

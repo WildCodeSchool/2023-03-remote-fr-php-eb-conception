@@ -53,7 +53,7 @@ CREATE TABLE
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `first_name` VARCHAR(55),
         `last_name` VARCHAR(55),
-        `message` TEXT(1000) NOT NULl,
+        `message` TEXT(1000) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 CREATE TABLE
@@ -100,7 +100,7 @@ CREATE TABLE
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `name` VARCHAR(255),
         `mail` VARCHAR(255),
-        `message` TEXT(1000) NOT NULl,
+        `message` TEXT(1000) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 --

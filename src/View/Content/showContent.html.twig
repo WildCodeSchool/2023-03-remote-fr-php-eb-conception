@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-	<main>
 
 		<h1>All Content</h1>
 
@@ -14,6 +13,7 @@
 			{% for item in content %}
 				<li>
 					<h2>{{ item.title }}</h2>
+                    <a href="/content/editContent?id={{ item.id }}">Edit</a>
 					<p>{{ item.bold_text }}</p>
 					<p>{{ item.coloured_text }}</p>
 					<p>{{ item.main_content }}</p>
@@ -26,5 +26,5 @@
 				</li>
 			{% endfor %}
 		</ul>
-	</main>
+
 {% endblock %}
