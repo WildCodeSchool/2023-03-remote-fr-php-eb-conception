@@ -31,19 +31,16 @@ class ContentController extends AbstractController
             $authorizedExtensions = ['jpg', 'png'];
             $maxFileSize = 2000000;
 
-            if ((!in_array($mainExtension, $authorizedExtensions))) {
-                $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png !';
-            }
-
-            if ((!in_array($secondaryExtension, $authorizedExtensions))) {
-                $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png !';
+            if (
+                (file_exists($_FILES['main_img']['tmp_name'])
+                    && filesize($_FILES['main_img']['tmp_name']) > $maxFileSize)
+            ) {
+                $errors[] = "Votre fichier doit faire moins de 2M !";
             }
 
             if (
-                file_exists($_FILES['main_img']['tmp_name'])
-                && filesize($_FILES['main_img']['tmp_name']) > $maxFileSize
-                && file_exists($_FILES['secondary_img']['tmp_name'])
-                && filesize($_FILES['secondary_img']['tmp_name']) > $maxFileSize
+                (file_exists($_FILES['secondary_img']['tmp_name'])
+                    && filesize($_FILES['secondary_img']['tmp_name']) > $maxFileSize)
             ) {
                 $errors[] = "Votre fichier doit faire moins de 2M !";
             }
@@ -54,12 +51,20 @@ class ContentController extends AbstractController
                 $contentManager->updateText($content);
 
                 if (move_uploaded_file($_FILES['main_img']['tmp_name'], $mainFilePath)) {
-                    $content['main_img'] = $mainFileName;
-                    $contentManager->updateMainFile($content);
+                    if ((!in_array($mainExtension, $authorizedExtensions))) {
+                        $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png pour l\'image principale!';
+                    } else {
+                        $content['main_img'] = $mainFileName;
+                        $contentManager->updateMainFile($content);
+                    }
                 }
                 if (move_uploaded_file($_FILES['secondary_img']['tmp_name'], $secondaryFilePath)) {
-                    $content['secondary_img'] = $secondaryFileName;
-                    $contentManager->updateSecondaryFile($content);
+                    if ((!in_array($secondaryExtension, $authorizedExtensions))) {
+                        $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png pour l\'image secondaire!!';
+                    } else {
+                        $content['secondary_img'] = $secondaryFileName;
+                        $contentManager->updateSecondaryFile($content);
+                    }
                 }
                 header('Location: /showContent');
                 return null;
