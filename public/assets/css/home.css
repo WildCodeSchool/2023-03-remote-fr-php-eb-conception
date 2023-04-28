@@ -202,7 +202,7 @@ a.galeryLink:visited {
 /* MENUISERUE */
 
 div.swiper-slide section.menuiserie {
-    background-image: url(/assets/imgs/menuiseriePrimary.png);
+    background-image: url(/uploads/menuiseriePrimary.png);
     background-position: right;
 }
 
@@ -215,9 +215,8 @@ section.menuiserie div.descriptionContainer {
 }
 
 /* ESCALIER */
-
 div.swiper-slide section.escalier {
-    background-image: url(/assets/imgs/escalierPrimary.png);
+    background-image: url(/uploads/escalierPrimary.png);
 }
 
 section.escalier div.colouredTextContainer {
@@ -231,7 +230,7 @@ section.escalier div.descriptionContainer {
 /* EXTERIEUR */
 
 div.swiper-slide section.exterieur {
-    background-image: url(/assets/imgs/exterieurPrimary.jpg);
+    background-image: url(/uploads/exterieurPrimary.jpg);
     background-position: center;
 }
 
@@ -246,7 +245,7 @@ section.exterieur div.descriptionContainer {
 /* EBENISTERIE */
 
 div.swiper-slide section.ebenisterie {
-    background-image: url(/assets/imgs/ebenisteriePrimary.jpg);
+    background-image: url(/uploads/ebenisteriePrimary.jpg);
     background-position: center;
 }
 
@@ -261,7 +260,7 @@ section.ebenisterie div.descriptionContainer {
 /* AGENCEMENT */
 
 div.swiper-slide section.agencement {
-    background-image: url(/assets/imgs/agencementPrimary.png);
+    background-image: url(/uploads/agencementPrimary.png);
     background-position: right;
 }
 
@@ -353,7 +352,7 @@ section.agencement div.descriptionContainer {
         order: 3;
         width: 31%;
     }
-    
+
     .secondaryImgContainer img {
         width: 100%;
         height: 100%;
@@ -378,7 +377,7 @@ section.agencement div.descriptionContainer {
         margin: 0;
         height: 59%;
     }
-    
+
     section.ebenisterie div.descriptionContainer {
         background-color: var(--black);
         width: 63%;

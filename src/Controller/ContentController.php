@@ -6,49 +6,6 @@ use App\Model\ContentManager;
 
 class ContentController extends AbstractController
 {
-    /**
-     * Add a new item
-     */
-    public function add()
-    {
-        $errors = [];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
-            $content = array_map('trim', $_POST);
-
-            // TODO validations (length, format...)
-            if (empty($content['bold_text'])) {
-                $errors[] = "Le champ Bold text est obligatoire";
-            }
-
-            if (empty($content['coloured_text'])) {
-                $errors[] = "Le champ Colored text est obligatoire";
-            }
-
-            if (empty($content['main_content'])) {
-                $errors[] = "Le champ Main content est obligatoire";
-            }
-
-            if (empty($content['main_img'])) {
-                $errors[] = "Le champ Main img link est obligatoire";
-            }
-
-            if (empty($content['secondary_img'])) {
-                $errors[] = "Le champ Secondary img link est obligatoire";
-            }
-
-            if (empty($errors)) {
-                $contentManager = new ContentManager();
-                $contentManager->insert($content);
-                // if validation is ok, insert and redirection
-
-                header('Location: /');
-                return null;
-            }
-        }
-        return $this->twig->render('Content/content.html.twig');
-    }
-
     public function showContent()
     {
         $contentManager = new ContentManager();
@@ -62,17 +19,54 @@ class ContentController extends AbstractController
      */
     public function editContent(int $id): ?string
     {
+        $errors = [];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $uploadDir = __DIR__ . '/../../public/uploads/';
+            $mainFileName = basename($_FILES['main_img']['name']);
+            $mainFilePath = $uploadDir . $mainFileName;
+            $secondaryFileName = basename($_FILES['secondary_img']['name']);
+            $secondaryFilePath = $uploadDir . $secondaryFileName;
+            $mainExtension = pathinfo($_FILES['main_img']['name'], PATHINFO_EXTENSION);
+            $secondaryExtension = pathinfo($_FILES['secondary_img']['name'], PATHINFO_EXTENSION);
+            $authorizedExtensions = ['jpg', 'png'];
+            $maxFileSize = 2000000;
+
+            if ((!in_array($mainExtension, $authorizedExtensions))) {
+                $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png !';
+            }
+
+            if ((!in_array($secondaryExtension, $authorizedExtensions))) {
+                $errors[] = 'Veuillez sélectionner une image de type Jpg ou Png !';
+            }
+
+            if (
+                file_exists($_FILES['main_img']['tmp_name'])
+                && filesize($_FILES['main_img']['tmp_name']) > $maxFileSize
+                && file_exists($_FILES['secondary_img']['tmp_name'])
+                && filesize($_FILES['secondary_img']['tmp_name']) > $maxFileSize
+            ) {
+                $errors[] = "Votre fichier doit faire moins de 2M !";
+            }
+
+            $content = array_map('trim', $_POST);
+            if (empty($errors)) {
+                $contentManager = new ContentManager();
+                $contentManager->updateText($content);
+
+                if (move_uploaded_file($_FILES['main_img']['tmp_name'], $mainFilePath)) {
+                    $content['main_img'] = $mainFileName;
+                    $contentManager->updateMainFile($content);
+                }
+                if (move_uploaded_file($_FILES['secondary_img']['tmp_name'], $secondaryFilePath)) {
+                    $content['secondary_img'] = $secondaryFileName;
+                    $contentManager->updateSecondaryFile($content);
+                }
+                header('Location: /showContent');
+                return null;
+            }
+        }
         $contentManager = new ContentManager();
         $content = $contentManager->selectOneById($id);
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST')
-        {
-            $content = array_map('trim', $_POST);
-            $contentManager->update($content);
-
-            header('Location: /showContent');
-            return null;
-        }
         return $this->twig->render('Content/editContent.html.twig', [
             'content' => $content,
         ]);

@@ -2,35 +2,44 @@
 
 {% block stylesheet %}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/admin_editcontent.css">
 {% endblock %}
 
 {% block content %}
 
-	<h1>Edit {{ content.title }}</h1>
+	<header>
+		<h1>Edit {{ content.title }}</h1>
+	</header>
 
-	<form method="post">
+	<form method="post" enctype="multipart/form-data">
 
 		<input type="hidden" value="{{ content.id }}" name="id">
 
-		<label for="bold_text">Bold text
-		<input type="text" value="{{ content.bold_text }}" name="bold_text" id="bold_text" placeholder="{{ content.bold_text }}">
-        </label>
+		<label for="bold_text">Text en gras
+			<input type="text" value="{{ content.bold_text }}" name="bold_text" id="bold_text" placeholder="{{ content.bold_text }}">
+		</label>
 
-        <label for="coloured_text">Coloured text
-		<input type="text" value="{{ content.coloured_text }}" name="coloured_text" id="coloured_text" placeholder="{{ content.coloured_text }}">
-        </label>
+		<label for="coloured_text">Text coloré
+			<input type="text" value="{{ content.coloured_text }}" name="coloured_text" id="coloured_text" placeholder="{{ content.coloured_text }}">
+		</label>
 
-        <label for="main_content">Main content
-		<textarea type="text" name="main_content" id="main_content" placeholder="{{ content.main_content }}" rows="5">{{ content.main_content }}</textarea>
-        </label>
+		<label for="main_content">Contenu Principale
+			<textarea type="text" name="main_content" id="main_content" placeholder="{{ content.main_content }}" rows="5">{{ content.main_content }}</textarea>
+		</label>
 
-        <label for="main_img">Main img
-		<input type="text" value="{{ content.main_img }}" name="main_img" id="main_img" placeholder="{{ content.main_img }}">
-        </label>
+		<label for="main_img">Image principale
+			<div>
+				<img src="/uploads/{{ content.main_img }}" alt="">
+			</div>
+			<input type="file" name="main_img" id="main_img"/>
+		</label>
 
-        <label for="secondary_img">Secondary img
-		<input type="text" value="{{ content.secondary_img }}" name="secondary_img" id="secondary_img" placeholder="{{ content.secondary_img }}">
-        </label>
+		<label for="secondary_img">Image Secondaire
+			<div>
+				<img src="/uploads/{{ content.secondary_img }}" alt="">
+			</div>
+			<input type="file" name="secondary_img" id="secondary_img"/>
+		</label>
 
 		<button>Submit</button>
 
