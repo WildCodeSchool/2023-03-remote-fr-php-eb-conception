@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 
 ;
 
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATIO>>>>>>> devN_CONNECTION */
 
 ;
 
@@ -95,14 +95,14 @@ CREATE TABLE
         `secondary_img` varchar(255)
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
-    CREATE TABLE
-    `contact` (
-        `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `name` VARCHAR(255),
-        `mail` VARCHAR(255),
-        `message` TEXT(1000) NOT NULL
-    ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+CREATE TABLE
+    `contact`(
+        `id`INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        `name` VARCHAR(255) NOT NULL,
+        `email` VARCHAR(255) NOT NULL, 
+        `message` VARCHAR(1000) NOT NULL
+    ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 --
 
 -- Contenu de la table `content`
