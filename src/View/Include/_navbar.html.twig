@@ -1,57 +1,73 @@
-
 <nav>
-  <div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
-  <header class="headerfornav">
-      <div class="header__logo">
-        <img src="/assets/images/Gold Luxury Business Logo.png" />
-      </div>
-      <nav class="header__nav">
-        <div class="header__nav__close" onclick="closeMenuMobile()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </div>
-            <ul class="header__nav__menu">
-                <li class="header__nav__menu__link">
-                  <a href="#" class="primarylink1" data-card="">Présentation</a>
-                  <ul class="header__nav__menu__underlink">
-                    <li><a href="/#menuiserie" class="secondarylink">Menuiserie</a></li>
-                    <li><a href="#" class="secondarylink">Agencement</a></li>
-                    <li><a href="#" class="secondarylink">Escalier</a></li>
-                    <li><a href="#" class="secondarylink">Exterieur</a></li>
-                  </ul>
-                </li>
-                <li class="header__nav__menu__link">
-                    <a href="/testimony" class="primarylink">Livre d'Or</a>
-                </li>
-                <li class="header__nav__menu__link">
-                    <a href="#" class="primarylink">Contact</a>
-                </li>
-            </ul>
-            </div>
-        </nav>
-        <div class="header__burger" onclick="openMenuMobile()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </div>
-    <script>
-      function openMenuMobile() {
-          document.querySelector('.header__nav').classList.add('open');
-          document.querySelector('.overlay-menu-mobile').classList.add('open');}
+	<div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
+	<header class="headerfornav">
+		<div class="header__logo">
+			<img src="/assets/images/Gold Luxury Business Logo.png"/>
+		</div>
+		<nav class="header__nav">
+			<div class="header__nav__close" onclick="closeMenuMobile()">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+				</svg>
+			</div>
+			<ul class="header__nav__menu">
+				<li class="header__nav__menu__link">
+					<a href="#" class="primarylink1" data-card="">Présentation</a>
+					<ul class="header__nav__menu__underlink">
+						<li>
+							<a href="/#menuiserie" class="secondarylink">Menuiserie</a>
+						</li>
 
-      function closeMenuMobile() {
-          document.querySelector('.header__nav').classList.remove('open');
-          document.querySelector('.overlay-menu-mobile').classList.remove('open');}
+						<li>
+							<a href="/#agencement" class="secondarylink">Agencement</a>
+						</li>
+						<li>
+							<a href="/#escalier" class="secondarylink">Escalier</a>
+						</li>
+						<li>
+							<a href="/#exterieur" class="secondarylink">Exterieur</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="header__nav__menu__link">
+					<a href="/testimony" class="primarylink">Livre d'Or</a>
+				</li>
+				<li class="header__nav__menu__link">
+					<a href="#" class="primarylink">Contact</a>
+				</li>
+				<li class="header__nav__menu__link">
+					<a href="/admin">Admin Login</a>
+					{% if admin %}
+						<a href="/showContent">Show content</a>
+					{% endif %}
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="header__burger" onclick="openMenuMobile()">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+		</svg>
+	</div>
+	<script>
+		function openMenuMobile() {
+document.querySelector('.header__nav').classList.add('open');
+document.querySelector('.overlay-menu-mobile').classList.add('open');
+}
 
 
-          const cards = document.querySelectorAll("[data-card]");
-            cards.forEach(function(elem) {
-                elem.addEventListener('click', function(event) {
-                    event.currentTarget.classList.toggle('active');
-                });
-            });
-      </script>
+function closeMenuMobile() {
+document.querySelector('.header__nav').classList.remove('open');
+document.querySelector('.overlay-menu-mobile').classList.remove('open');
+}
+
+
+const cards = document.querySelectorAll("[data-card]");
+cards.forEach(function (elem) {
+elem.addEventListener('click', function (event) {
+event.currentTarget.classList.toggle('active');
+});
+});
+	</script>
 </nav>
