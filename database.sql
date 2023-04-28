@@ -51,10 +51,9 @@ SET time_zone = "+00:00";
 CREATE TABLE
     `testimony` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `message` TEXT(1000) NOT NULL,
-        `message_date` DATETIME NOT NULL,
-        `name` VARCHAR(55),
-        `email` varchar(100)
+        `first_name` VARCHAR(55),
+        `last_name` VARCHAR(55),
+        `message` TEXT(1000) NOT NULl,
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 CREATE TABLE
@@ -88,6 +87,7 @@ CREATE TABLE
 CREATE TABLE
     `content` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        `title` VARCHAR(55) NOT NULL,
         `bold_text` TEXT(1000) NULL,
         `coloured_text` TEXT(1000) NULL,
         `main_content` TEXT(1000) NULL,
@@ -109,6 +109,7 @@ CREATE TABLE
 INSERT INTO
     `content` (
         `id`,
+        `title`,
         `bold_text`,
         `coloured_text`,
         `main_content`,
@@ -117,6 +118,7 @@ INSERT INTO
     )
 VALUES (
         1,
+        'Menuiserie',
         'JE VOUS ACCOMPAGNE DANS VOS PROJETS EN VOUS APPORTANT MON EXPERTISE',
         'UN SAVOIR FAIRE CLASSIQUE MODERNISÉ',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -127,6 +129,7 @@ VALUES (
         'menuiserieSecondary.png'
     ), (
         2,
+        'Escaliers',
         'STAIRWAYS TO HEAVEN AND BACK',
         'DES TRAVAUX FAIT SUR MESURE POUR VOTRE QUOTIDIEN',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -137,6 +140,7 @@ VALUES (
         'escalierSecondary.png'
     ), (
         3,
+        'Exterieurs',
         'VOS EXTÉRIEURS SOIGNÉS POUR SE SENTIR COMME A LA MAISON',
         'MODERNISEZ ET AMENAGEZ VOS EXTERIEURS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -147,6 +151,7 @@ VALUES (
         'exterieurSecondary.jpg'
     ), (
         4,
+        'Ebenisterie',
         'A PLACE TO STAY',
         'SAVOIR EBENER, C\'EST TOUCHER LE SOURIRE DES DIEUX',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -157,6 +162,7 @@ VALUES (
         'ebenisterieSecondary.jpg'
     ), (
         5,
+        'Agencement',
         'UNE MAISON AGENCÉ EST UNE MAISON POUR LA VIE',
         'UN AGENCEMENT MAÎTRISÉ POUR UNE VIE PROSPERE',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -169,9 +175,22 @@ VALUES (
 
 --
 
--- Index pour les tables exportées
+-- Table for ADMIN
 
---
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE
+`admin` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+INSERT INTO `admin` VALUES (1,'admin','$2y$10$bAJyIcoZUjHnvX5AEuwN6OJ3VYzkpOUYZrVJQaIyQviAUumMG0LNW');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 --
 

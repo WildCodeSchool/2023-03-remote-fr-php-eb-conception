@@ -10,7 +10,8 @@
 			{% block title %}{% endblock %}
 		</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
+		</head>
 
     {% block stylesheet %}{% endblock %}
 </head>
@@ -22,6 +23,9 @@
 	</main>
     {% block javascript %}{% endblock %}
 </body>
+		<body>
+			{% include 'Include/_navbar.html.twig' %}
+			{% block content %}{% endblock %}
+			{% block javascript %}{% endblock %}
+		</body>
 </html>
-
-
