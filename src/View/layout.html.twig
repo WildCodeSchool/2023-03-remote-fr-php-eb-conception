@@ -13,9 +13,13 @@
 		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
 		</head>
 
+
 		<body>
 			{% include 'Include/_navbar.html.twig' %}
-			{% block content %}{% endblock %}
+			<main>
+				{% block content %}{% endblock %}
+			</main>
 			{% block javascript %}{% endblock %}
 		</body>
-</html>
+
+	</html>
