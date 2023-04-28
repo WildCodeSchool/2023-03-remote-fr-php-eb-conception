@@ -15,4 +15,5 @@ return [
     'items/livreDor' => ['ItemController', 'livreDor', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'contact' => ['HomeController', 'contact',],
 ];
