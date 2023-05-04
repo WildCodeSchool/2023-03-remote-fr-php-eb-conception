@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="/assets/css/home.css"/>
 	<link rel="stylesheet" href="/assets/css/carrousel_home.css"/>
-
 {% endblock %}
 
 {% block content %}
@@ -85,16 +84,16 @@
 
 						<div class="descriptionContainer layout1">
 							<p>
-								{{ carpentry.main_content }}
+								{{ carpentry.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ carpentry.main_img }}" alt="">
+							<img src="/uploads/{{ carpentry.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ carpentry.secondary_img }}" alt="">
+							<img src="/uploads/{{ carpentry.secondary_img }}" alt="">
 
 						</div>
 
@@ -127,16 +126,16 @@
 
 						<div class="descriptionContainer layout2">
 							<p>
-								{{ carpentry.main_content }}
+								{{ carpentry.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/{{ stairs.main_img }}" alt="">
+							<img src="/uploads/{{ stairs.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/{{ stairs.secondary_img }}" alt="">
+							<img src="/uploads/{{ stairs.secondary_img }}" alt="">
 
 						</div>
 
@@ -177,16 +176,16 @@
 
 						<div class="descriptionContainer layout1">
 							<p>
-								{{ exterior.main_content }}
+								{{ exterior.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ exterior.main_img }}" alt="">
+							<img src="/uploads/{{ exterior.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ exterior.secondary_img }}" alt="">
+							<img src="/uploads/{{ exterior.secondary_img }}" alt="">
 
 						</div>
 
@@ -220,16 +219,16 @@
 
 						<div class="descriptionContainer layout2">
 							<p>
-								{{ cabinetMaking.main_content }}
+								{{ cabinetMaking.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/{{ cabinetMaking.main_img }}" alt="">
+							<img src="/uploads/{{ cabinetMaking.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/{{ cabinetMaking.secondary_img }}" alt="">
+							<img src="/uploads/{{ cabinetMaking.secondary_img }}" alt="">
 						</div>
 
 						<div class="galeryLinkContainer layout2">
@@ -269,16 +268,16 @@
 
 						<div class="descriptionContainer layout1">
 							<p>
-								{{ layout.main_content }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
+								{{ layout.main_content|raw }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ layout.main_img }}" alt="">
+							<img src="/uploads/{{ layout.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ layout.secondary_img }}" alt="">
+							<img src="/uploads/{{ layout.secondary_img }}" alt="">
 
 						</div>
 

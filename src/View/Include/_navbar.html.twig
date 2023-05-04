@@ -36,12 +36,15 @@
 				<li class="header__nav__menu__link">
 					<a href="/contact" class="primarylink">Contact</a>
 				</li>
-				<li class="header__nav__menu__link">
-					<a href="/admin">Admin Login</a>
-					{% if admin %}
+				{% if admin %}
+					<li class="header__nav__menu__link">
 						<a href="/showContent">Show content</a>
-					{% endif %}
-				</li>
+					</li>
+				{% else %}
+					<li class="header__nav__menu__link">
+						<a href="/admin">Admin Login</a>
+					</li>
+				{% endif %}
 			</ul>
 		</div>
 	</nav>

@@ -12,6 +12,7 @@ return [
     'recep' => ['RecepController', 'recep'],
     'content' => ['ContentController', 'add'],
     'showContent' => ['ContentController', 'showContent'],
+    'content/editContent' => ['ContentController', 'editContent', ['id']],
     'admin' => ['AdminController', 'login' ],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
