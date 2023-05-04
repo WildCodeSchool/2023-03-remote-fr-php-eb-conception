@@ -88,8 +88,8 @@ CREATE TABLE
     `content` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `title` VARCHAR(55) NOT NULL,
-        `bold_text` TEXT(1000) NULL,
-        `coloured_text` TEXT(1000) NULL,
+        `bold_text` TEXT(100) NULL,
+        `coloured_text` TEXT(100) NULL,
         `main_content` TEXT(1000) NULL,
         `main_img` varchar(255),
         `secondary_img` varchar(255)

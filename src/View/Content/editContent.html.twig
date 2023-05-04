@@ -8,10 +8,17 @@
 {% block content %}
 
 	<header>
-		<h1>Edit {{ content.title }}</h1>
+		<h1>Edit
+			{{ content.title }}</h1>
 	</header>
 
 	<form method="post" enctype="multipart/form-data">
+
+		<ul>
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
 
 		<input type="hidden" value="{{ content.id }}" name="id">
 
@@ -23,7 +30,7 @@
 			<input type="text" value="{{ content.coloured_text }}" name="coloured_text" id="coloured_text" placeholder="{{ content.coloured_text }}">
 		</label>
 
-		<label for="main_content">Contenu Principale
+		<label for="main_content">Contenu principale
 			<textarea type="text" name="main_content" id="main_content" placeholder="{{ content.main_content }}" rows="5">{{ content.main_content }}</textarea>
 		</label>
 

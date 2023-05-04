@@ -46,12 +46,12 @@ class ContentManager extends AbstractManager
     /**
      * Update item in database
      */
-    public function updateMainFile(array $content): bool
+    public function updateFile(array $content, $image = 'main_img'): bool
     {
         $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
-        " SET `main_img` = :main_img WHERE id=:id");
+        " SET " . $image . " = :image WHERE id=:id");
         $statement->bindValue('id', $content['id'], PDO::PARAM_INT);
-        $statement->bindValue('main_img', $content['main_img'], \PDO::PARAM_STR);
+        $statement->bindValue('image', $content[$image], \PDO::PARAM_STR);
 
         return $statement->execute();
     }
