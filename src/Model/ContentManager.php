@@ -55,17 +55,4 @@ class ContentManager extends AbstractManager
 
         return $statement->execute();
     }
-
-    /**
-     * Update item in database
-     */
-    public function updateSecondaryFile(array $content): bool
-    {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
-        " SET `secondary_img` = :secondary_img WHERE id=:id");
-        $statement->bindValue('id', $content['id'], PDO::PARAM_INT);
-        $statement->bindValue('secondary_img', $content['secondary_img'], \PDO::PARAM_STR);
-
-        return $statement->execute();
-    }
 }
