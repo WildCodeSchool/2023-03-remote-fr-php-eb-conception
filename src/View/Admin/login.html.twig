@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+{% endblock %}
+
+{% block content %}
+	<form action="" method="post">
+
+		<h1>Admin Login</h1>
+
+		<div>
+			<label for="username">Username
+			<input type="text" name="username" id="username" placeholder="Username">
+            </label>
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="text" name="password" id="password" placeholder="Password">
+            </label>
+		</div>
+
+		<button type="submit">envoyer</button>
+
+	</form>
+{% endblock %}

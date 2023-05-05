@@ -5,21 +5,17 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/assets/imgs/ebc_logo.png">
-
 		<title>
 			{% block title %}{% endblock %}
 		</title>
-
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    {% block stylesheet %}{% endblock %}
+		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
 </head>
 
-<body>
-    {% include 'Include/_navbar.html.twig' %}
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-</body>
+		<body>
+			{% include 'Include/_navbar.html.twig' %}
+			<main>
+				{% block content %}{% endblock %}
+			</main>
+			{% block javascript %}{% endblock %}
+		</body>
 </html>
-
-

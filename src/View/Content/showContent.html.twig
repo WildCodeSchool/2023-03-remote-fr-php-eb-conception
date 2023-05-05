@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/admin_showcontent.css">
+{% endblock %}
+
+{% block content %}
+
+	<h1>All Content</h1>
+
+	{% for item in content %}
+		<details>
+			<summary role="button">{{ item.title }}</summary>
+			<article>
+				<header>
+					<nav>
+						<h2>{{ item.title }}</h2>
+						<h3>
+							<a href="/content/editContent?id={{ item.id }}">Edit</a>
+						</h3>
+					</nav>
+				</header>
+				<hgroup>
+					<h6>Bold text:</h6>
+					<p>{{ item.bold_text }}</p>
+				</hgroup>
+				<hgroup>
+					<h6>Bold text:</h6>
+					<p>{{ item.coloured_text }}</p>
+				</hgroup>
+				<hgroup>
+					<h6>Bold text:</h6>
+					<p>{{ item.main_content }}</p>
+				</hgroup>
+				<nav>
+					<div class="pico-image-wrapper">
+						<img class="pico-image" src="/uploads/{{ item.main_img }}" alt="">
+					</div>
+					<div class="pico-image-wrapper">
+						<img class="pico-image" src="/uploads/{{ item.secondary_img }}" alt="">
+					</div>
+				</nav>
+			</article>
+		</details>
+	{% endfor %}
+{% endblock %}
