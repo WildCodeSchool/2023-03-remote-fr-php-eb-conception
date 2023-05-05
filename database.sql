@@ -54,6 +54,7 @@ CREATE TABLE
         `first_name` VARCHAR(55),
         `last_name` VARCHAR(55),
         `message` TEXT(1000) NOT NULl,
+        `is_published` TINYINT DEFAULT 0
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 CREATE TABLE
@@ -174,7 +175,34 @@ VALUES (
         'agencementSecondary.png'
     );
 
---
+-- Contenu de la table testimony
+
+INSERT INTO
+    `testimony` (
+        `id`,
+        `first_name`,
+        `last_name`,
+        `message` 
+    )
+    VALUES (
+        1,
+        'Emilienne',
+        'Pauquin',
+        'Christophe est à l\'écoute des clients, très disponible et très sérieux.'
+        ),
+        (
+        2,
+        'Maurice',
+        'Bosh',
+        'Je recommande EB Conception. Christophe s\'adapte à la demande des clients.'
+        ),
+        (
+        3,
+        'Raymonde',
+        'Domeneche',
+        'Très professionnel, les délais du chantier ont été respectés. Les finitions sont parfaites.'
+        );
+
 
 -- Table for ADMIN
 

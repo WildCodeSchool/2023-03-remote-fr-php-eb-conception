@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+{% endblock %}
+
+{% block content %}
+<main>
+	<ul>
+		{% for testimonies in testimony %}
+			<li>
+				<h2>{{ testimonies.first_name }} {{ testimonies.last_name }}</h2>
+				
+				<p>{{ testimonies.message }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</main>
+{% endblock %}

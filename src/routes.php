@@ -12,6 +12,8 @@ return [
     'recep' => ['RecepController', 'recep'],
     'content' => ['ContentController', 'add'],
     'showContent' => ['ContentController', 'showContent'],
+    'showTestimony' => ['TestimonyController', 'showTestimony'],
+    'testimony' => ['TestimonyController', 'add'],
     'admin' => ['AdminController', 'login' ],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
