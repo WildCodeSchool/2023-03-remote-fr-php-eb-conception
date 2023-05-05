@@ -11,16 +11,14 @@
 		</title>
 
 		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
+
 		</head>
 
-    {% block stylesheet %}{% endblock %}
-</head>
-
-<body>
-    {% include 'Include/_navbar.html.twig' %}
-    <main>
-    {% block content %}{% endblock %}
-    </main>
-    {% block javascript %}{% endblock %}
-</body>
-</html>
+		<body>
+			{% include 'Include/_navbar.html.twig' %}
+			<main>
+				{% block content %}{% endblock %}
+			</main>
+			{% block javascript %}{% endblock %}
+		</body>
+	</html>

@@ -576,7 +576,7 @@ section.agencement div.descriptionContainer {
         font-size: 35px;
         z-index: 2;
         position: absolute;
-        bottom: 12%;
+        bottom: 14%;
         right: 25%;
     }
 
@@ -665,8 +665,13 @@ section.agencement div.descriptionContainer {
     }
 
     .galeryLinkContainer.layout2 {
-        all: unset;
-        display: none;
+        display: block;
+        color: var(--beige);
+        font-size: 35px;
+        z-index: 2;
+        position: absolute;
+        bottom: 14%;
+        left: 20%;
     }
 
     .backgroundBox1.layout2 {
