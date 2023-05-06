@@ -96,12 +96,12 @@ CREATE TABLE
         `secondary_img` varchar(255)
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
-    CREATE TABLE
+CREATE TABLE
     `contact` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `name` VARCHAR(255),
         `mail` VARCHAR(255),
-        `message` TEXT(1000) NOT NULl,
+        `message` TEXT(1000) NOT NULl
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 --
