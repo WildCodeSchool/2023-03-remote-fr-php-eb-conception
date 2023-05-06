@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/admin_editcontent.css">
+{% endblock %}
+
+{% block content %}
+
+	<header>
+		<h1>Edit
+			{{ content.title }}</h1>
+	</header>
+
+	<form method="post" enctype="multipart/form-data">
+
+		<ul>
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+
+		<input type="hidden" value="{{ content.id }}" name="id">
+
+		<label for="bold_text">Text en gras
+			<input type="text" value="{{ content.bold_text }}" name="bold_text" id="bold_text" placeholder="{{ content.bold_text }}">
+		</label>
+
+		<label for="coloured_text">Text coloré
+			<input type="text" value="{{ content.coloured_text }}" name="coloured_text" id="coloured_text" placeholder="{{ content.coloured_text }}">
+		</label>
+
+		<label for="main_content">Contenu principale
+			<textarea type="text" name="main_content" id="main_content" placeholder="{{ content.main_content }}" rows="5">{{ content.main_content }}</textarea>
+		</label>
+
+		<label for="main_img">Image principale
+			<div>
+				<img src="/uploads/{{ content.main_img }}" alt="">
+			</div>
+			<input type="file" name="main_img" id="main_img"/>
+		</label>
+
+		<label for="secondary_img">Image Secondaire
+			<div>
+				<img src="/uploads/{{ content.secondary_img }}" alt="">
+			</div>
+			<input type="file" name="secondary_img" id="secondary_img"/>
+		</label>
+
+		<button>Submit</button>
+
+	</form>
+
+{% endblock %}

@@ -6,3 +6,4 @@ db.php
 .idea
 .vscode
 config\db.php
+public/uploads

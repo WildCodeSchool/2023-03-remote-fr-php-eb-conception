@@ -8,12 +8,11 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="/assets/css/home.css"/>
 	<link rel="stylesheet" href="/assets/css/carrousel_home.css"/>
-
 {% endblock %}
 
 {% block content %}
 
-	<main>
+
 		<div
 			class="swiper">
 			<!-- Additional required wrapper -->
@@ -65,7 +64,7 @@
 				</div>
 
 				<div class="swiper-slide">
-					<section class="menuiserie" aria-label="Ménuiserie">
+					<section class="menuiserie" aria-label="Ménuiserie" id="menuiserie">
 
 						<div class="subtitleContainer layout1">
 							<h2>
@@ -84,22 +83,22 @@
 						</div>
 
 						<div class="descriptionContainer layout1">
-							<p>
-								{{ carpentry.main_content }}
+							<p class="description">
+								{{ carpentry.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ carpentry.main_img }}" alt="">
+							<img src="/uploads/{{ carpentry.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ carpentry.secondary_img }}" alt="">
+							<img src="/uploads/{{ carpentry.secondary_img }}" alt="">
 
 						</div>
 
 						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="">Galerie...</a>
+							<a class="galeryLink" href="/galleryM">Galerie...</a>
 						</div>
 
 					</section>
@@ -107,7 +106,7 @@
 
 				<div class="swiper-slide">
 
-					<section class="escalier" aria-label="Éscalier">
+					<section class="escalier" aria-label="Éscalier" id="escalier">
 
 						<div class="subtitleContainer layout2">
 							<h2>
@@ -127,16 +126,16 @@
 
 						<div class="descriptionContainer layout2">
 							<p>
-								{{ carpentry.main_content }}
+								{{ carpentry.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/{{ stairs.main_img }}" alt="">
+							<img src="/uploads/{{ stairs.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/{{ stairs.secondary_img }}" alt="">
+							<img src="/uploads/{{ stairs.secondary_img }}" alt="">
 
 						</div>
 
@@ -157,7 +156,7 @@
 
 				<div class="swiper-slide">
 
-					<section class="exterieur" aria-label="Extérieur">
+					<section class="exterieur" aria-label="Extérieur" id="exterieur">
 
 						<div class="subtitleContainer layout1">
 							<h2>
@@ -177,21 +176,21 @@
 
 						<div class="descriptionContainer layout1">
 							<p>
-								{{ exterior.main_content }}
+								{{ exterior.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ exterior.main_img }}" alt="">
+							<img src="/uploads/{{ exterior.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ exterior.secondary_img }}" alt="">
+							<img src="/uploads/{{ exterior.secondary_img }}" alt="">
 
 						</div>
 
 						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="">Galerie...</a>
+							<a class="galeryLink" href="/galleryE">Galerie...</a>
 						</div>
 
 					</section>
@@ -200,7 +199,7 @@
 
 				<div class="swiper-slide">
 
-					<section class="ebenisterie" aria-label="Ébénisterie">
+					<section class="ebenisterie" aria-label="Ébénisterie" id="ebenisterie">
 
 						<div class="subtitleContainer layout2">
 							<h2>
@@ -220,16 +219,16 @@
 
 						<div class="descriptionContainer layout2">
 							<p>
-								{{ cabinetMaking.main_content }}
+								{{ cabinetMaking.main_content|raw }}
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout2">
-							<img src="/assets/imgs/{{ cabinetMaking.main_img }}" alt="">
+							<img src="/uploads/{{ cabinetMaking.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout2">
-							<img src="/assets/imgs/{{ cabinetMaking.secondary_img }}" alt="">
+							<img src="/uploads/{{ cabinetMaking.secondary_img }}" alt="">
 						</div>
 
 						<div class="galeryLinkContainer layout2">
@@ -249,7 +248,7 @@
 				</div>
 				<div class="swiper-slide">
 
-					<section class="agencement" aria-label="Agencement">
+					<section class="agencement" aria-label="Agencement" id="agencement">
 
 						<div class="subtitleContainer layout1">
 							<h2>
@@ -269,21 +268,21 @@
 
 						<div class="descriptionContainer layout1">
 							<p>
-								{{ layout.main_content }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
+								{{ layout.main_content|raw }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
 							</p>
 						</div>
 
 						<div class="mainImgContainer layout1">
-							<img src="/assets/imgs/{{ layout.main_img }}" alt="">
+							<img src="/uploads/{{ layout.main_img }}" alt="">
 						</div>
 
 						<div class="secondaryImgContainer layout1">
-							<img src="/assets/imgs/{{ layout.secondary_img }}" alt="">
+							<img src="/uploads/{{ layout.secondary_img }}" alt="">
 
 						</div>
 
 						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="">Galerie...</a>
+							<a class="galeryLink" href="/galleryA">Galerie...</a>
 						</div>
 
 					</section>

@@ -27,5 +27,12 @@ const swiper = new Swiper('.swiper', {
 
     },
 
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+
 
 });
+
+

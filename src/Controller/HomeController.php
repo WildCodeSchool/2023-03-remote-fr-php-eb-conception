@@ -25,4 +25,8 @@ class HomeController extends AbstractController
         'layout' => $layout
         ]);
     }
+    public function contact(): string
+    {
+        return $this->twig->render('Home/contact.html.twig');
+    }
 }
