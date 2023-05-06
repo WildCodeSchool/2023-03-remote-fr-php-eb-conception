@@ -13,7 +13,7 @@ return [
     'content' => ['ContentController', 'add'],
     'showContent' => ['ContentController', 'showContent'],
     'showTestimony' => ['TestimonyController', 'showTestimony'],
-    'testimony' => ['TestimonyController', 'add'],
+    'testimony/add' => ['TestimonyController', 'add'],
     'admin' => ['AdminController', 'login' ],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],

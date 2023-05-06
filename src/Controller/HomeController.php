@@ -25,4 +25,5 @@ class HomeController extends AbstractController
         'layout' => $layout
         ]);
     }
+    
 }
