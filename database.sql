@@ -1,59 +1,16 @@
--- phpMyAdmin SQL Dump
 
--- version 4.5.4.1deb2ubuntu2
-
--- http://www.phpmyadmin.net
-
---
-
--- Client :  localhost
-
--- Généré le :  Jeu 26 Octobre 2017 à 13:53
-
--- Version du serveur :  5.7.19-0ubuntu0.16.04.1
-
--- Version de PHP :  7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 SET time_zone = "+00:00";
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
-
-;
-
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
-
-;
-
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */
-
-;
-
-/*!40101 SET NAMES utf8mb4 */
-
-;
-
---
-
--- Base de données :  `simple-mvc`
-
---
-
--- --------------------------------------------------------
-
---
-
--- Structure de la table `item`
-
---
 
 CREATE TABLE
     `testimony` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `first_name` VARCHAR(55),
         `last_name` VARCHAR(55),
-        `message` TEXT(1000) NOT NULl,
+        `message` TEXT(1000) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 CREATE TABLE
@@ -190,34 +147,3 @@ CREATE TABLE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `admin` VALUES (1,'admin','$2y$10$bAJyIcoZUjHnvX5AEuwN6OJ3VYzkpOUYZrVJQaIyQviAUumMG0LNW');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-
---
-
--- Index pour la table `item`
-
---
-
---
-
--- AUTO_INCREMENT pour les tables exportées
-
---
-
---
-
--- AUTO_INCREMENT pour la table `item`
-
---
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-
-;
-
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-
-;
-
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-
-;

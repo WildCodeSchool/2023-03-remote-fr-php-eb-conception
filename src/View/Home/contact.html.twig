@@ -2,62 +2,59 @@
 
 {% block content %}
 
+	<form method="post">
 
-  <section class="mainContactContainer">
-     
-      <div class="container">
+		<section class="mainContactContainer">
 
-        <div class="screen">
+			<div class="container">
 
-            <div class="screen-body-item left">
+				<div class="screen">
 
-              <div class="app-title">
-                <span>Pour nous joindre</span>
-              </div>
+					<div class="screen-body-item left">
 
-            </div>
+						<div class="app-title">
+							<span>Pour nous joindre</span>
+						</div>
+						<ul>
+							{% for error in errors %}
+								<li>{{ error }}</li>
+							{% endfor %}
+						</ul>
+					</div>
 
-            <div class="screen-body-item">
+					<div class="screen-body-item">
 
-              <div class="input-contact">
+						<div>
+							<input type="text" class="nom" name="name" id="name" placeholder="NOM" required>
+						</div>
 
-                <div>
-                  <input class="nom" placeholder="NOM">
-                </div>
+						<div>
+							<input type="text" class="email" name="email" id="email" placeholder="EMAIL" required>
+						</div>
 
-                <div>
-                  <input class="email" placeholder="EMAIL">
-                </div>
+						<div>
+							<input type="text" class="message" name="message" id="message" placeholder="MESSAGE" required>
+						</div>
 
-                <div>
-                  <input class="message" placeholder="MESSAGE">
-                </div>
+					</div>
 
-                <div class="group-buttons">
-                  <button class="button">ANNULER</button> </n>
-                  <button class="button">ENVOYER</button>
-                </div>
+					<div class="group-buttons">
+						<button class="buttonSend">ANNULER</button>
+					</n>
+					<button class="buttonSend">ENVOYER</button>
+				</div>
 
-              </div>
 
-            </div>
+			</div>
 
-        </div>
+		</div>
 
-      </div>
+	</div>
+</form>
 
-      
-      <div class="right-contact">
-          <p>CONTACT</p>
-          <p>Adresse</p>
-          <p>Email</p>
-          <p>Tel : 0651626263</p>
-      </div>
-
-  </section>
-
-  
-
-  <img class="img-contact" src="https://image.jimcdn.com/app/cms/image/transf/none/path/s605dcde7785e57a4/image/i4339c70801210f69/version/1645456497/image.jpg">
-
-{% endblock %} 
+<div class="right-contact">
+	<p>CONTACT</p>
+	<p>Adresse</p>
+	<p>Email</p>
+	<p>Tel : 0651626263</p>
+</div></section><img class="img-contact" src="https://image.jimcdn.com/app/cms/image/transf/none/path/s605dcde7785e57a4/image/i4339c70801210f69/version/1645456497/image.jpg">{% endblock %}

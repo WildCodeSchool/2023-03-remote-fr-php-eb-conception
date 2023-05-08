@@ -15,9 +15,8 @@ return [
     'admin' => ['AdminController', 'login' ],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
-    'items/contact' => ['ItemController', 'contact', ['id']],
     'items/livreDor' => ['ItemController', 'livreDor', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'contact' => ['HomeController', 'contact',],
+    'contact' => ['ContactController', 'add',]
 ];
