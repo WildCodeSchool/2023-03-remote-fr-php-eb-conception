@@ -12,17 +12,18 @@
 		<h2>Laissez votre avis !</h2>
 
 		<form method="post" action="/recep">
+			<input type="hidden" value="{{ testimony.id }}" name="id">
 			<div>
 				<label for="first_name" htmlentities>Prenom</label>
-				<input type="text" name="Prenom" id="first_name" required>
+				<input type="text"  name="first_name" id="first_name" required>
 			</div>
 			<div>
 				<label for="last_name" htmlentities>Nom</label>
-				<input type="text" name="Nom" id="last_name" required><br>
+				<input type="text"  name="last_name" id="last_name" required><br>
 			</div>
 			<div>
 				<label for="message">Message</label>
-				<textarea message="" id="message" rows="2" required></textarea><br>
+				<textarea message="" name="message" id="message" rows="2" required></textarea><br>
 			</div>
 			 <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />

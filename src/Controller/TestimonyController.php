@@ -18,10 +18,8 @@ class TestimonyController extends AbstractController
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
             $testimony = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
             if (empty($testimony['first_name'])) {
                 $errors[] = "Le champ est obligatoire";
             }
@@ -51,5 +49,25 @@ class TestimonyController extends AbstractController
         $testimony = $testimonyManager->selectAll();
 
         return $this->twig->render('Testimony/showTestimony.html.twig', ['testimony' => $testimony]);
+    }
+
+    public function editStatut(int $id): ?string
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $testimony = array_map('trim', $_POST);
+
+            $TestimonyManager = new TestimonyManager();
+            $TestimonyManager->updateStatut($testimony);
+
+            header('Location: /showTestimony');
+            return null;
+        }
+
+
+        $TestimonyManager = new TestimonyManager();
+        $testimony = $TestimonyManager->selectOneById($id);
+        return $this->twig->render('Testimony/showTestimony.html.twig', [
+            'testimony' => $testimony,
+        ]);
     }
 }

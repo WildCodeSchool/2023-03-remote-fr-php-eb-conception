@@ -1,18 +1,29 @@
 {% extends 'layout.html.twig' %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/admin_showtestimony.css">
 {% endblock %}
 
 {% block content %}
-<main>
-	<ul>
-		{% for testimonies in testimony %}
-			<li>
-				<h2>{{ testimonies.first_name }} {{ testimonies.last_name }}</h2>
-				
-				<p>{{ testimonies.message }}</p>
-			</li>
-		{% endfor %}
-	</ul>
-</main>
+	<form method="post">
+		<ul>
+			<input type="hidden" value="{{ testimony.id }}" name="id">
+
+			{% for testimonies in testimony %}
+				<li>
+					<h2>{{ testimonies.first_name }}
+						{{ testimonies.last_name }}</h2>
+
+					<p>{{ testimonies.message }}</p>
+					<div class="onoffswitch">
+						<input type="checkbox" value="{{ testimonies.is_published }} name=" onoffswitch {{ testimonies.is_published }} " class=" onoffswitch-checkbox" id=" myonoffswitch {{testimonies.id}} tabindex=" 0" checked>
+						<label class=" onoffswitch-label" for=" myonoffswitch {{testimonies.id}} ">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</form>
 {% endblock %}
