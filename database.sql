@@ -1,8 +1,6 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 SET time_zone = "+00:00";
-
 
 
 CREATE TABLE
@@ -148,34 +146,3 @@ CREATE TABLE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `admin` VALUES (1,'admin','$2y$10$bAJyIcoZUjHnvX5AEuwN6OJ3VYzkpOUYZrVJQaIyQviAUumMG0LNW');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-
---
-
--- Index pour la table `item`
-
---
-
---
-
--- AUTO_INCREMENT pour les tables exportées
-
---
-
---
-
--- AUTO_INCREMENT pour la table `item`
-
---
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-
-;
-
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-
-;
-
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-
-;
