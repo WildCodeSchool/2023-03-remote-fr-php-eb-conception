@@ -2,7 +2,9 @@
 	<div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
 	<header class="headerfornav">
 		<div class="header__logo">
-			<img src="/assets/images/Gold Luxury Business Logo.png"/>
+			<a href="/">
+				<img src="/assets/images/Gold Luxury Business Logo.png"/>
+			</a>
 		</div>
 		<nav class="header__nav">
 			<div class="header__nav__close" onclick="closeMenuMobile()">
@@ -12,20 +14,20 @@
 			</div>
 			<ul class="header__nav__menu">
 				<li class="header__nav__menu__link">
-					<a href="#" class="primarylink1" data-card="">Présentation</a>
+					<a href="/" class="primarylink1" data-card="">Présentation</a>
 					<ul class="header__nav__menu__underlink">
 						<li>
-							<a href="/#menuiserie" class="secondarylink">Menuiserie</a>
+							<a href="#menuiserie" class="secondarylink">Menuiserie</a>
 						</li>
 
 						<li>
-							<a href="/#agencement" class="secondarylink">Agencement</a>
+							<a href="#agencement" class="secondarylink">Agencement</a>
 						</li>
 						<li>
-							<a href="/#escalier" class="secondarylink">Escalier</a>
+							<a href="#escalier" class="secondarylink">Escalier</a>
 						</li>
 						<li>
-							<a href="/#exterieur" class="secondarylink">Exterieur</a>
+							<a href="#exterieur" class="secondarylink">Exterieur</a>
 						</li>
 
 					</ul>
@@ -36,12 +38,15 @@
 				<li class="header__nav__menu__link">
 					<a href="/contact" class="primarylink">Contact</a>
 				</li>
-				<li class="header__nav__menu__link">
-					<a href="/admin">Admin Login</a>
-					{% if admin %}
+				{% if admin %}
+					<li class="header__nav__menu__link">
 						<a href="/showContent">Show content</a>
-					{% endif %}
-				</li>
+					</li>
+				{% else %}
+					<li class="header__nav__menu__link">
+						<a href="/admin">Admin Login</a>
+					</li>
+				{% endif %}
 			</ul>
 		</div>
 	</nav>

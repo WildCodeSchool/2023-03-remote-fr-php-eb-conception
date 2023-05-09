@@ -1,5 +1,3 @@
-
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 SET time_zone = "+00:00";
@@ -45,18 +43,19 @@ CREATE TABLE
     `content` (
         `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `title` VARCHAR(55) NOT NULL,
-        `bold_text` TEXT(1000) NULL,
-        `coloured_text` TEXT(1000) NULL,
+        `bold_text` TEXT(100) NULL,
+        `coloured_text` TEXT(100) NULL,
         `main_content` TEXT(1000) NULL,
         `main_img` varchar(255),
         `secondary_img` varchar(255)
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+
 CREATE TABLE
     `contact`(
         `id`INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `name` VARCHAR(255) NOT NULL,
-        `email` VARCHAR(255) NOT NULL, 
+        `email` VARCHAR(255) NOT NULL,
         `message` VARCHAR(1000) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 --

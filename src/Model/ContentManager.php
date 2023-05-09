@@ -30,11 +30,28 @@ class ContentManager extends AbstractManager
     /**
      * Update item in database
      */
-    public function update(array $content): bool
+    public function updateText(array $content): bool
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `bold_text` = :bold_text WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
+            " SET `bold_text` = :bold_text, `coloured_text` = :coloured_text,
+        `main_content` = :main_content WHERE id=:id");
         $statement->bindValue('id', $content['id'], PDO::PARAM_INT);
-        $statement->bindValue('bold_text', $content['bold_text'], PDO::PARAM_STR);
+        $statement->bindValue('bold_text', $content['bold_text'], \PDO::PARAM_STR);
+        $statement->bindValue('coloured_text', $content['coloured_text'], \PDO::PARAM_STR);
+        $statement->bindValue('main_content', $content['main_content'], \PDO::PARAM_STR);
+
+        return $statement->execute();
+    }
+
+    /**
+     * Update item in database
+     */
+    public function updateFile(array $content, $image = 'main_img'): bool
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
+        " SET " . $image . " = :image WHERE id=:id");
+        $statement->bindValue('id', $content['id'], PDO::PARAM_INT);
+        $statement->bindValue('image', $content[$image], \PDO::PARAM_STR);
 
         return $statement->execute();
     }
