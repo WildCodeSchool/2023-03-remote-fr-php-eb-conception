@@ -40,8 +40,8 @@ class ContactController extends AbstractController
                 return null;
             }
         }
-        return $this->twig->render('home/contact.html.twig',[
+        return $this->twig->render('home/contact.html.twig', [
             'errors' => $errors
         ]);
     }
-}    
+}
