@@ -15,11 +15,13 @@ return [
     'content/editContent' => ['ContentController', 'editContent', ['id']],
     'admin' => ['AdminController', 'login' ],
     'admin/logout' => ['AdminController', 'logout' ],
+    'galleryM' => ['GalleryMController', 'galleryM'],
+    'galleryA' => ['GalleryAController', 'galleryA'],
+    'galleryE' => ['GalleryEController', 'galleryE'],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
-    'items/contact' => ['ItemController', 'contact', ['id']],
     'items/livreDor' => ['ItemController', 'livreDor', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'contact' => ['HomeController', 'contact',],
+    'contact' => ['ContactController', 'add',]
 ];
