@@ -12,7 +12,7 @@ form {
 }
 
 h1 {
-margin-left: 10%;
+    margin-left: 10%;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -54,17 +54,17 @@ input {
     transition: all .3s;
     border-bottom: 2px solid;
     color: var(--lightBrown);
-    margin:0;
+    margin: 0;
 
 }
-.rate{
+
+.rate {
     padding: 0 20px;
     display: inline-flex;
     flex-direction: row-reverse;
     float: left;
     margin-right: 25%;
     margin: left 35%
-
 }
 
 label {
@@ -102,66 +102,72 @@ button {
     margin-top: 15%;
 }
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1200px) {
 
-    .rate{
-    display: inline-flex;
-    flex-direction: row-reverse;
-    float: left;
-    height: 46px;
-    padding: 0 20px;
-    margin-left: 10%;
-    margin-right: 0%;
+    .rate {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        float: left;
+        height: 46px;
+        padding: 0 20px;
+        margin-left: 10%;
+        margin-right: 0%;
     }
 }
-@media screen and (max-width:1200px){
-.rate {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    float: left;
-     margin-left: 25%;
-    margin-right: 55%;
-}
 
-div.container {
-    top: 8%;
-}
+@media screen and (max-width:1200px) {
+    .rate {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        float: left;
+        margin-left: 25%;
+        margin-right: 55%;
+    }
 
-form{
-    padding:0;
-margin-top: 2rem;
-    height: 35%;
-    width: 100%;
-}
-.container{
-    width: 82.5%;
-    padding:1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
+    div.container {
+        top: 8%;
+    }
 
-h2{
-    height: 1rem;
-    padding-bottom: 1rem;
-}
-h1{
-    margin-left: 2.5rem;
-}
-input{
-    width: 100%;
-}
-textarea{
-    width:100% ;
-}
-button{
-    margin-left: 45%;
-}
+    form {
+        padding: 0;
+        margin-top: 2rem;
+        height: 35%;
+        width: 100%;
+    }
+
+    .container {
+        width: 82.5%;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    h2 {
+        height: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        margin-left: 2.5rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    button {
+        margin-left: 45%;
+    }
 }
 
 .rate:not(:checked)>input {
     position: absolute;
-   top: -9999px;
-   margin-right: 160px;
+    top: -9999px;
+    margin-right: 160px;
 }
 
 .rate:not(:checked)>label {
@@ -203,75 +209,84 @@ button{
 
 @keyframes tonext {
     75% {
-      left: 0;
+        left: 0;
     }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
 
-  @keyframes tostart {
+    95% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes tostart {
     75% {
-      left: 0;
+        left: 0;
     }
+
     95% {
-      left: -300%;
+        left: -300%;
     }
+
     98% {
-      left: -300%;
+        left: -300%;
     }
-    99% {
-      left: 0;
-    }
-  }
 
-  @keyframes snap {
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes snap {
     96% {
-      scroll-snap-align: center;
+        scroll-snap-align: center;
     }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
 
-  body {
+    97% {
+        scroll-snap-align: none;
+    }
+
+    99% {
+        scroll-snap-align: none;
+    }
+
+    100% {
+        scroll-snap-align: center;
+    }
+}
+
+body {
     margin: 0 auto;
     text-align: center;
-  }
+}
 
-  *::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 0;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
-  }
+}
 
-  ol,
-  li {
+ol,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+}
 
-  section.carousel {
+section.carousel {
     top: 0;
     bottom: 0;
     display: flex;
@@ -284,9 +299,9 @@ button{
     filter: drop-shadow(0 0 10px rgba(44, 47, 44, 0.2));
     perspective: 100px;
     position: absolute;
-  }
+}
 
-  .carousel__viewport {
+.carousel__viewport {
     position: absolute;
     top: -3%;
     right: 0;
@@ -297,9 +312,9 @@ button{
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-  }
+}
 
-  .carousel__slide {
+.carousel__slide {
     border-radius: 2.5rem;
     position: relative;
     flex: 0 0 100%;
@@ -308,14 +323,14 @@ button{
     counter-increment: item;
     margin-bottom: 90%;
     color: black;
-  }
+}
 
-  .carousel__slide:nth-child(even) {
+.carousel__slide:nth-child(even) {
     background-color: #a0a0a0;
 
-  }
+}
 
-  .carousel__slide:before {
+.carousel__slide:before {
     content: counter(item);
     position: absolute;
     top: 50%;
@@ -323,46 +338,47 @@ button{
     transform: translate3d(-50%, -40%, 70px);
     color: #1a1a1a;
     font-size: 0;
-  }
+}
 
-  .carousel__snapper {
+.carousel__snapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     scroll-snap-align: center;
-  }
+}
 
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .carousel__snapper {
-      animation-name: none;
+        animation-name: none;
     }
-  }
+}
 
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
     animation-name: none;
-  }
+}
 
-  .carousel__navigation {
+.carousel__navigation {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     text-align: center;
     top: 30%;
-  }
+}
 
-  .carousel__navigation-list,
-  .carousel__navigation-item {
+.carousel__navigation-list,
+.carousel__navigation-item {
     display: inline-block;
-  }
-  ol.carousel__navigation-list {
-    margin-top : -5rem;
-  }
+}
 
-  .carousel__navigation-button {
+ol.carousel__navigation-list {
+    margin-top: -5rem;
+}
+
+.carousel__navigation-button {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -372,12 +388,12 @@ button{
     border-radius: 90%;
     font-size: 0;
     transition: transform 0.1s;
-  }
+}
 
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
     position: absolute;
     top: 0;
     margin-top: 28%;
@@ -387,21 +403,21 @@ button{
     border-radius: 50%;
     font-size: 0;
     outline: 0;
-  }
+}
 
-  .carousel::before,
-  .carousel__prev {
+.carousel::before,
+.carousel__prev {
     left: -1rem;
-  }
+}
 
-  .carousel::after,
-  .carousel__next {
+.carousel::after,
+.carousel__next {
     right: -1rem;
-  }
+}
 
-  /* Personnalisation flèches droite & gauche*/
-  .carousel::before,
-  .carousel::after {
+/* Personnalisation flèches droite & gauche*/
+.carousel::before,
+.carousel::after {
     content: "";
     z-index: 1;
     background-color: #696161;
@@ -414,45 +430,45 @@ button{
     text-align: center;
     pointer-events: none;
 
-  }
+}
 
-  /* Flèche gauche */
-  .carousel::before {
+/* Flèche gauche */
+.carousel::before {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
+}
 
-  /* Flèche droite */
-  .carousel::after {
+/* Flèche droite */
+.carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
+}
 
-  .reviews {
+.reviews {
     color: black;
     width: 10px;
     height: 10px;
-  }
+}
 
-  .carousel_container-comment {
+.carousel_container-comment {
     margin-top: 1.5rem;
-  }
+}
 
-    .carousel_container-comment >p {
-        margin: 1.5rem;
-    }
+.carousel_container-comment>p {
+    margin: 1.5rem;
+}
 
-  .testimony_title{
+.testimony_title {
     color: #1a1a1a;
     margin-left: 2rem;
-  }
+}
 
-  .carousel_testimony{
+.carousel_testimony {
     font-weight: bolder;
-  }
+}
 
 
-  /* Style étoiles du caroussel*/
+/* Style étoiles du caroussel*/
 
-  .rate_testimony {
+.rate_testimony {
     display: inline-flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
@@ -463,12 +479,14 @@ button{
     margin-top: 5%;
     margin-left: 32%;
     margin-right: 30%;
-  }
-  .rate_testimony:not(:checked) > input {
+}
+
+.rate_testimony:not(:checked)>input {
     position: absolute;
     top: -9999px;
-  }
-  .rate_testimony:not(:checked):not(:checked) > label {
+}
+
+.rate_testimony:not(:checked):not(:checked)>label {
     float: right;
     width: 1em;
     overflow: hidden;
@@ -476,20 +494,23 @@ button{
     cursor: pointer;
     font-size: 30px;
     color: #ccc;
-  }
-  .rate_testimony:not(:checked) > label:before {
+}
+
+.rate_testimony:not(:checked)>label:before {
     content: "★ ";
     padding: 0.5rem;
-  }
+}
 
 
- html { overflow-y: hidden; }
+html {
+    overflow-y: hidden;
+}
 
-  /*medias queries carrousel*/
+/*medias queries carrousel*/
 
-  @media screen and (max-width:768px){
+@media screen and (max-width:768px) {
 
-    section.carousel{
+    section.carousel {
         top: 60%;
         width: 42%;
         height: 50%;
@@ -498,40 +519,39 @@ button{
     .carousel__slide {
         width: 42%;
         height: 50%;
-      }
+    }
 
-       ol.carousel__viewport{
+    ol.carousel__viewport {
         left: -12rem;
     }
 
-    section.carousel::before{
+    section.carousel::before {
         top: 3rem;
-        left : -13rem;
+        left: -13rem;
         position: absolute;
     }
 
-    section.carousel::after{
+    section.carousel::after {
         top: 3rem;
     }
-   .carousel_container-comment {
+
+    .carousel_container-comment {
         margin-top: 1rem;
-      }
+    }
 
-        .carousel_container-comment >p {
-            margin: 0.5rem;
-        }
+    .carousel_container-comment>p {
+        margin: 0.5rem;
+    }
 
-      .testimony_title{
+    .testimony_title {
         margin-left: 1rem;
-      }
+    }
 
-    ol.carousel__navigation-list{
+    ol.carousel__navigation-list {
         display: none;
     }
 
-    div.rate_testimony{
+    div.rate_testimony {
         margin-left: 22%;
     }
-  }
-
-
+}

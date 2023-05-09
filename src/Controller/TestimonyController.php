@@ -6,6 +6,26 @@ use App\Model\TestimonyManager;
 
 class TestimonyController extends AbstractController
 {
+    public function showTestimony()
+    {
+        $testimonyManager = new TestimonyManager();
+        $testimonies = $testimonyManager->selectAll();
+
+        return $this->twig->render('Admin/showTestimony.html.twig', ['testimonies' => $testimonies]);
+    }
+
+    public function deleteTestimony()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+
+            $testimonyManager = new TestimonyManager();
+            $testimonyManager->delete($id);
+
+            header('Location: /showTestimony');
+        }
+    }
+
     public function add()
     {
         $errors = [];
