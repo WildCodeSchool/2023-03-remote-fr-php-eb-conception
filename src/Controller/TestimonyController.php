@@ -63,7 +63,6 @@ class TestimonyController extends AbstractController
             return null;
         }
 
-
         $TestimonyManager = new TestimonyManager();
         $testimony = $TestimonyManager->selectOneById($id);
         return $this->twig->render('Testimony/showTestimony.html.twig', [
