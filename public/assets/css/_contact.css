@@ -1,167 +1,124 @@
+
 /* Main container */
 
 section.mainContactContainer {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Iceland';
-    font-weight: 25px;
-    letter-spacing: 1.4px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Iceland';
+  font-weight: 25px;
+  letter-spacing: 1.4px;
 }
 
 ul.errors {
     color: var(--beige);
     text-align: center;
-    list-style-type: none;
 }
 
 /* IMAGE EBENISTE */
 
 .img-contact {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 50%;
-    z-index: -7;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 50%;
+  z-index: -7;
 }
 
 /* BANDEAU CONTACT A DROITE */
 
-.right-contact {
-    background-color: #686464;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    line-height: 2rem;
-    padding-left: 6%;
-    width: 20%;
-    height: 100%;
-    font-size: 20px;
-    color: #E3C6A9;
-    /*couleur texte*/
+.right-contact{
+  background-color: #686464;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 26%;
+  height: 100%;
+  color: #E3C6A9; /*couleur texte*/
 }
 
 /* Formulaire de Contact */
 
 .container {
-    align-items: center;
-    padding: 0;
-    width: 40rem;
-    background-color: white;
+  align-items: center;
+  padding: 0;
+  width: 40rem;
+  background-color: white;
 }
 
 .screen {
-    background: #353434;
-    height: 40vh;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  background: #353434;
+  height: 40vh;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .app-title {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    color: #E3C6A9;
-    font-family: "Iceland";
-    font-size: 40px;
-    left: 4rem;
-    bottom: -10px;
-    width: 20rem;
-    height: 40px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: #E3C6A9;
+  font-family: "Iceland";
+  font-size: 40px;
+  left: 4rem;
+  bottom: -10px;
+  width: 20rem;
+  height: 40px;
 }
-
 .group-buttons, input {
-    font-family: 'Iceland';
-    font-weight: 25px;
-    letter-spacing: 1.4px;
-    margin-bottom: 15px;
-    margin-left: 7rem;
-    background: none;
-    border: none;
-    color: #E3C6A9;
-    font-size: 14px;
+  font-family: 'Iceland';
+  font-weight: 25px;
+  letter-spacing: 1.4px;
+  margin-bottom: 15px;
+  margin-left: 7rem;
+  background: none;
+  border: none;
+  color: #E3C6A9;
+  font-size: 14px;
 }
 
 .buttonSend {
-    font-size: 16px;
-    margin-top: 20px;
-    background: none;
-    font-family: 'Iceland';
-    border: none;
-    color: #E3C6A9;
+  font-size: 16px;
+  margin-top: 20px;
+  background: none;
+  font-family: 'Iceland';
+  border: none;
+  color: #E3C6A9;
 }
 
 .group-buttons, .buttonSend:hover {
-    outline: none;
-    color: antiquewhite;
+  outline: none;
+  color: antiquewhite;
 }
 
 @media screen and (max-width: 728px) {
-    section.mainContactContainer {
-        display: flex;
-        padding-top: 10%;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100vh;
-        margin: 0;
-        font-family: 'Iceland';
-        font-weight: 25px;
-        font-size: 40px;
-        letter-spacing: 1.4px;
-        background-color: #353434;
-    }
-
-    .img-contact {
-        display: none;
-    }
-
-    .buttonSend {
-        margin-left: 4.7rem;
-    }
-
-    .app-title {
-        margin-top: 8vh;
-        margin-left: 12vh;
-    }
-
-    .right-contact {
-        align-items: center;
-        line-height: 2rem;
-        padding-left: 0%;
-        width: 100%;
-        height: 100%;
-        font-size: 20px;
-        color: var(--beige);
-        /*couleur texte*/
-    }
-
-    .container {
-        align-items: center;
-        padding: 0;
-        width: 40rem;
-        background-color: white;
-    }
-
-    .screen {
-        height: 40vh;
-        width: 100vh;
-        border-radius: 0;
-        box-shadow: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .img-contact {
-        display: none;
-    }
+  section.mainContactContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    font-family: 'Iceland';
+    font-weight: 25px;
+    letter-spacing: 1.4px;
+    background-color:#353434;
+  }
+  .img-contact {
+    display: none;
+  }
+  .buttonSend {
+    margin-left: 4.7rem;
+  }
+  .app-title {
+    margin-top: 8vh;
+    margin-left: 12vh;
+  }
 }
