@@ -17,6 +17,8 @@ return [
     'galleryM' => ['GalleryMController', 'galleryM'],
     'galleryA' => ['GalleryAController', 'galleryA'],
     'galleryE' => ['GalleryEController', 'galleryE'],
+    'galleryEsc' => ['GalleryEscController', 'galleryEsc'],
+    'galleryEbe' => ['GalleryEbeController', 'galleryEbe'],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/contact' => ['ItemController', 'contact', ['id']],

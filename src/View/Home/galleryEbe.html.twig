@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/slide.css"/>
+{% endblock %}
+
+{% block content %}
+	<swiper-slide>
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\1645456276.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\Capture d’écran 2023-04-06 à 17.00.13.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\image (1).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\image (2).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\image (3).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\image (4).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\ebenisterie\image.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="\assets\js\slide.js"></script>
+	{% endblock %}
