@@ -146,7 +146,7 @@ VALUES (
         'VOS EXTÉRIEURS SOIGNÉS POUR SE SENTIR COMME A LA MAISON',
         'MODERNISEZ ET AMENAGEZ VOS EXTERIEURS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat.
+		Ut enim ad minim vus_2/testimony_review_bddeniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia eserunt mollit anim id est laborum.',
         'exterieurPrimary.jpg',
@@ -182,7 +182,7 @@ INSERT INTO
         `id`,
         `first_name`,
         `last_name`,
-        `message` 
+        `message`
     )
     VALUES (
         1,
