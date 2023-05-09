@@ -1,14 +1,13 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 	<link rel="stylesheet" href="/assets/css/admin_editcontent.css">
 {% endblock %}
 
 {% block content %}
 
 	<header>
-		<h1>Edit
+		<h1>Modiffications pour la section
 			{{ content.title }}</h1>
 	</header>
 
@@ -48,7 +47,7 @@
 			<input type="file" name="secondary_img" id="secondary_img"/>
 		</label>
 
-		<button>Submit</button>
+		<button>Modifier</button>
 
 	</form>
 

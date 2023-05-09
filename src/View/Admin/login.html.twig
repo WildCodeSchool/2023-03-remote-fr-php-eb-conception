@@ -5,23 +5,22 @@
 {% endblock %}
 
 {% block content %}
-	<form action="" method="post">
-
-		<h1>Admin Login</h1>
-
-		<div>
-			<label for="username">Username
-			<input type="text" name="username" id="username" placeholder="Username">
-            </label>
-		</div>
-
-		<div>
-			<label for="password">Password</label>
-			<input type="text" name="password" id="password" placeholder="Password">
-            </label>
-		</div>
-
-		<button type="submit">envoyer</button>
-
-	</form>
+	<main class="container">
+		<article class="grid">
+			<div>
+					<h1>Connexion Administrateur</h1>
+				<form action="" method="post">
+					<input type="text" name="username" id="username" placeholder="Nom d'utilisateur" aria-label="Login" required/>
+					<input type="password" id="password" name="password" placeholder="Mot de passe" aria-label="Password" required/>
+					<fieldset>
+						<label for="remember">
+							<input type="checkbox" role="switch" id="remember" name="remember"/>
+							Remember me
+						</label>
+					</fieldset>
+					<button type="submit" class="contrast">Connexion</button>
+				</form>
+			</div>
+		</article>
+	</main>
 {% endblock %}

@@ -17,19 +17,18 @@
 					<a href="/" class="primarylink1" data-card="">Présentation</a>
 					<ul class="header__nav__menu__underlink">
 						<li>
-							<a href="#menuiserie" class="secondarylink">Menuiserie</a>
+							<a href="/#menuiserie" class="secondarylink">Menuiserie</a>
 						</li>
 
 						<li>
-							<a href="#agencement" class="secondarylink">Agencement</a>
+							<a href="/#agencement" class="secondarylink">Agencement</a>
 						</li>
 						<li>
-							<a href="#escalier" class="secondarylink">Escalier</a>
+							<a href="/#escalier" class="secondarylink">Escalier</a>
 						</li>
 						<li>
-							<a href="#exterieur" class="secondarylink">Exterieur</a>
+							<a href="/#exterieur" class="secondarylink">Exterieur</a>
 						</li>
-
 					</ul>
 				</li>
 				<li class="header__nav__menu__link">
@@ -40,11 +39,20 @@
 				</li>
 				{% if admin %}
 					<li class="header__nav__menu__link">
-						<a href="/showContent">Show content</a>
+						<a href="/showContent">Modifier le contenu</a>
+					</li>
+                    <li class="header__nav__menu__link">
+						<a href="/showContact">Voir demandes clients</a>
+					</li>
+                    <li class="header__nav__menu__link">
+						<a href="/showTestimony">Voir avis clients</a>
+					</li>
+                    <li class="header__nav__menu__link">
+						<a href="/admin/logout">Deconnexion</a>
 					</li>
 				{% else %}
 					<li class="header__nav__menu__link">
-						<a href="/admin">Admin Login</a>
+						<a href="/admin">Connexion adminstrateur</a>
 					</li>
 				{% endif %}
 			</ul>

@@ -1,7 +1,6 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 	<link rel="stylesheet" href="/assets/css/admin_showcontent.css">
 {% endblock %}
 
@@ -17,27 +16,29 @@
 					<nav>
 						<h2>{{ item.title }}</h2>
 						<h3>
-							<a href="/content/editContent?id={{ item.id }}">Edit</a>
+							<a href="/content/editContent?id={{ item.id }}">Modifier</a>
 						</h3>
 					</nav>
 				</header>
 				<hgroup>
-					<h6>Bold text:</h6>
+					<h6>Text en gras:</h6>
 					<p>{{ item.bold_text }}</p>
 				</hgroup>
 				<hgroup>
-					<h6>Bold text:</h6>
+					<h6>Text coloré:</h6>
 					<p>{{ item.coloured_text }}</p>
 				</hgroup>
 				<hgroup>
-					<h6>Bold text:</h6>
+					<h6>Contenu principale:</h6>
 					<p>{{ item.main_content }}</p>
 				</hgroup>
 				<nav>
 					<div class="pico-image-wrapper">
+						<h6>Image principale:</h6>
 						<img class="pico-image" src="/uploads/{{ item.main_img }}" alt="">
 					</div>
 					<div class="pico-image-wrapper">
+						<h6>Image Secondaire:</h6>
 						<img class="pico-image" src="/uploads/{{ item.secondary_img }}" alt="">
 					</div>
 				</nav>
