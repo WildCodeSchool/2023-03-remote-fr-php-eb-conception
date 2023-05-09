@@ -32,7 +32,7 @@
 					</ul>
 				</li>
 				<li class="header__nav__menu__link">
-					<a href="/testimony" class="primarylink">Livre d'Or</a>
+					<a href="/testimony/add" class="primarylink">Livre d'Or</a>
 				</li>
 				<li class="header__nav__menu__link">
 					<a href="/contact" class="primarylink">Contact</a>
@@ -41,13 +41,13 @@
 					<li class="header__nav__menu__link">
 						<a href="/showContent">Modifier le contenu</a>
 					</li>
-                    <li class="header__nav__menu__link">
+					<li class="header__nav__menu__link">
 						<a href="/showContact">Voir demandes clients</a>
 					</li>
-                    <li class="header__nav__menu__link">
+					<li class="header__nav__menu__link">
 						<a href="/showTestimony">Voir avis clients</a>
 					</li>
-                    <li class="header__nav__menu__link">
+					<li class="header__nav__menu__link">
 						<a href="/">Deconnexion</a>
 					</li>
 				{% else %}
@@ -58,13 +58,13 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="header__burger" onclick="openMenuMobile()">
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-		</svg>
-	</div>
-	<script>
-		function openMenuMobile() {
+<div class="header__burger" onclick="openMenuMobile()">
+	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+	</svg>
+</div>
+<script>
+	function openMenuMobile() {
 document.querySelector('.header__nav').classList.add('open');
 document.querySelector('.overlay-menu-mobile').classList.add('open');
 }
@@ -82,5 +82,4 @@ elem.addEventListener('click', function (event) {
 event.currentTarget.classList.toggle('active');
 });
 });
-	</script>
-</nav>
+</script></nav>

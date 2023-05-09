@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/book.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 {% endblock %}
 
 {% block content %}
@@ -47,50 +48,27 @@
 	</div>
 </div>
 
-
-<section class="carousel" aria-label="Gallery">
-	<ol class="carousel__viewport">
-		{% for testimony in testimonies %}
-			<li id="carousel__slide{{ testimony.id }}" tabindex="0" class="carousel__slide">
-				<div class="carousel_container-comment">
-					<h2 class="testimony_title">Nos avis !</h2>
-					<p>{{ testimony.first_name }}</p>
-					<p>{{ testimony.last_name }}</p>
-					<p class="carousel_testimony">"{{ testimony.message }}"</p>
-					<div class="rate_testimony">
-						<input type="radio" id="star5" name="rate_testimony" value="5"/>
-						<label for="star5" title="text"></label>
-						<input type="radio" id="star4" name="rate_testimony" value="4"/>
-						<label for="star4" title="text"></label>
-						<input type="radio" id="star3" name="rate_testimony" value="3"/>
-						<label for="star3" title="text"></label>
-						<input type="radio" id="star2" name="rate_testimony" value="2"/>
-						<label for="star2" title="text"></label>
-						<input type="radio" id="star1" name="rate_testimony" value="1"/>
-						<label for="star1" title="text"></label>
-					</div>
-				</div>
-
-
-				<div class="carousel__snapper">
-					<a href="#carousel__slide{{ testimony.id - 1 }}" class="carousel__prev">Go to last slide</a>
-					<a href="#carousel__slide{{ testimony.id + 1 }}" class="carousel__next">Go to next slide</a>
-				</div>
-			</li>
-		{% endfor %}
-	</ol>
-
-	<aside class="carousel__navigation">
-		<ol class="carousel__navigation-list">
+<section class="carousel">
+	<div class="swiper Swiper">
+		<div class="swiper-wrapper">
 			{% for testimony in testimonies %}
-				<li class="carousel__navigation-item">
-					<a href="#carousel__slide{{ testimony.id }}" class="carousel__navigation-button">Go to slide
-						{{ testimony.id }}</a>
-				</li>
+				<div class="swiper-slide">
+					<h2 class="testimony_title">Nos avis !</h2>
+                    <br>
+					<p class="name">{{ testimony.first_name }} {{ testimony.last_name }}</p>
+                    <br>
+                    <br>
+					<p class="carousel_testimony">"{{ testimony.message }}"</p>
+				</div>
 			{% endfor %}
-		</ol>
-	</aside>
+		</div>
+	</div>
 </section>
-
-
-{% include 'Include/_navbar.html.twig' %}{% endblock %}
+{% endblock %}{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+	var swiper = new Swiper(".Swiper", {
+effect: "cards",
+grabCursor: true
+});
+</script>{% endblock %}

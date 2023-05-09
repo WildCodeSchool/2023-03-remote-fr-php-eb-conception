@@ -12,11 +12,6 @@ section.mainContactContainer {
   letter-spacing: 1.4px;
 }
 
-ul.errors {
-    color: var(--beige);
-    text-align: center;
-}
-
 /* IMAGE EBENISTE */
 
 .img-contact {
@@ -67,7 +62,7 @@ ul.errors {
   color: #E3C6A9;
   font-family: "Iceland";
   font-size: 40px;
-  left: 4rem;
+  left: 5rem;
   bottom: -10px;
   width: 20rem;
   height: 40px;
@@ -76,8 +71,8 @@ ul.errors {
   font-family: 'Iceland';
   font-weight: 25px;
   letter-spacing: 1.4px;
-  margin-bottom: 15px;
-  margin-left: 7rem;
+  margin-bottom: 5px;
+  margin-left: 11rem;
   background: none;
   border: none;
   color: #E3C6A9;
@@ -91,6 +86,7 @@ ul.errors {
   font-family: 'Iceland';
   border: none;
   color: #E3C6A9;
+  margin-left: 3rem;
 }
 
 .group-buttons, .buttonSend:hover {
@@ -104,7 +100,7 @@ ul.errors {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
     font-family: 'Iceland';
     font-weight: 25px;
@@ -115,7 +111,7 @@ ul.errors {
     display: none;
   }
   .buttonSend {
-    margin-left: 4.7rem;
+    margin-left: 2rem;
   }
   .app-title {
     margin-top: 8vh;

@@ -49,7 +49,7 @@ class TestimonyController extends AbstractController
                 $testimonyManager = new TestimonyManager();
                 $testimonyManager->insert($testimony);
 
-                header('Location: /testimony/add');
+                header('Location: /recep');
                 return null;
             }
         }
