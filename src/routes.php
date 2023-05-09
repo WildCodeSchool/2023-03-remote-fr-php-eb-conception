@@ -14,7 +14,7 @@ return [
     'showContent' => ['ContentController', 'showContent'],
     'content/editContent' => ['ContentController', 'editContent', ['id']],
     'admin' => ['AdminController', 'login' ],
-    'admin/logout'=> ['AdminController', 'logout' ],
+    'admin/logout' => ['AdminController', 'logout' ],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/contact' => ['ItemController', 'contact', ['id']],
