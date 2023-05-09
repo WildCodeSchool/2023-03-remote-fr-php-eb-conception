@@ -1,0 +1,34 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin_showcontent.css">
+{% endblock %}
+
+{% block content %}
+
+	<h1>Avis client:</h1>
+
+{% if testimonies %}
+	{% for testimony in testimonies %}
+		<details>
+			<summary role="button">{{ testimony.first_name }} {{ testimony.last_name }}</summary>
+			<article>
+				<header>
+					<nav>
+						<h2>{{ testimony.first_name }} {{ testimony.last_name }}</h2>
+						<h3>
+							<a href="/deleteTestimony?id={{ testimony.id }}">Supprimer</a>
+						</h3>
+					</nav>
+				</header>
+				<hgroup>
+					<h6>Email:</h6>
+					<p>{{ testimony.message }}</p>
+				</hgroup>
+			</article>
+		</details>
+	{% endfor %}
+{% else %}
+	<p>Il n'y a pas de demandes d'avis.</p>
+{% endif %}
+{% endblock %}

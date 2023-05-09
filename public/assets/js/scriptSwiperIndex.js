@@ -16,7 +16,7 @@ const swiper = new Swiper('.swiper', {
 
     mousewheel: {
         invert: false,
-      },
+    },
 
     breakpoints: {
 
@@ -30,9 +30,9 @@ const swiper = new Swiper('.swiper', {
     keyboard: {
         enabled: true,
         onlyInViewport: false,
-      },
+    },
 
+    watchSlidesProgress: true,
 
 });
-
 
