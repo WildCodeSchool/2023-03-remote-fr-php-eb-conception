@@ -43,7 +43,6 @@ class TestimonyController extends AbstractController
             if (empty($testimony['message'])) {
                 $errors[] = "Le champ message est obligatoire";
             }
-            var_dump($_POST);
 
             if (empty($errors)) {
                 $testimonyManager = new TestimonyManager();
