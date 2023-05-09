@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/slide.css"/>
+{% endblock %}
+
+{% block content %}
+	<swiper-slide>
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (1).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (2).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (3).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (4).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (5).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610 (6).jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="\assets\gallery_img\escalier\1409240610.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="\assets\js\slide.js"></script>
+	{% endblock %}
