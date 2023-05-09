@@ -21,15 +21,21 @@ class ContactController extends AbstractController
             $contact = array_map('trim', $_POST);
 
             if (empty($contact['name'])) {
-                $errors[] = "Le champ est obligatoire";
+                $errors[] = "Le champ nom est obligatoire";
             }
 
             if (empty($contact['email'])) {
-                $errors[] = "Le champ est obligatoire";
+                $errors[] = "Le champ email est obligatoire";
             }
 
             if (empty($contact['message'])) {
-                $errors[] = "Le champ est obligatoire";
+                $errors[] = "Le champ message est obligatoire";
+            }
+
+            if (empty($contact['email'])) {
+                $errors[] = 'EMAIL is required';
+            } elseif (!filter_var($contact['email'], FILTER_VALIDATE_EMAIL)) {
+                $errors[] = 'EMAIL is not valid';
             }
 
             if (empty($errors)) {
@@ -40,8 +46,28 @@ class ContactController extends AbstractController
                 return null;
             }
         }
-        return $this->twig->render('home/contact.html.twig', [
+        return $this->twig->render('Home/contact.html.twig', [
             'errors' => $errors
         ]);
+    }
+
+    public function showContact()
+    {
+        $contactManager = new ContactManager();
+        $contact = $contactManager->selectAll();
+
+        return $this->twig->render('Admin/showContact.html.twig', ['contact' => $contact]);
+    }
+
+    public function deleteContact()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+
+            $contactManager = new ContactManager();
+            $contactManager->delete($id);
+
+            header('Location: /showContact');
+        }
     }
 }

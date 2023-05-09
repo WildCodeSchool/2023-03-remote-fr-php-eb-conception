@@ -11,7 +11,6 @@ class ContentManager extends AbstractManager
     /**
      * Insert new item in database
      */
-
     public function insert(array $content): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .

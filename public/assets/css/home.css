@@ -176,8 +176,6 @@ div.swiper-slide section {
     overflow: hidden;
 }
 
-
-
 a.galeryLink:link {
     text-decoration: none;
     color: var(--beige);
@@ -199,7 +197,7 @@ a.galeryLink:visited {
 
 /* MOBILE LAYOUT  VARIATIONS */
 
-/* MENUISERUE */
+/* MENUISERIE */
 
 div.swiper-slide section.menuiserie {
     background-image: url(/uploads/menuiseriePrimary.png);
@@ -536,6 +534,7 @@ section.agencement div.descriptionContainer {
         font-size: 30px;
         font-weight: 900;
         z-index: 1;
+        line-height: 2.5rem;
     }
 
     .descriptionContainer.layout1 {
@@ -630,6 +629,7 @@ section.agencement div.descriptionContainer {
         font-size: 30px;
         font-weight: 900;
         z-index: 0;
+        line-height: 2rem;
     }
 
     .descriptionContainer.layout2 {

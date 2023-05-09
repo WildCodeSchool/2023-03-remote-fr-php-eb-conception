@@ -1,0 +1,38 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin_showcontent.css">
+{% endblock %}
+
+{% block content %}
+
+	<h1>Demandes de contact:</h1>
+
+{% if contact %}
+	{% for item in contact %}
+		<details>
+			<summary role="button">{{ item.name }}</summary>
+			<article>
+				<header>
+					<nav>
+						<h2>{{ item.name }}</h2>
+						<h3>
+							<a href="/deleteContact?id={{ item.id }}">Supprimer</a>
+						</h3>
+					</nav>
+				</header>
+				<hgroup>
+					<h6>Email:</h6>
+					<p>{{ item.email }}</p>
+				</hgroup>
+				<hgroup>
+					<h6>Message:</h6>
+					<p>{{ item.message }}</p>
+				</hgroup>
+			</article>
+		</details>
+	{% endfor %}
+{% else %}
+	<p>Il n'y a pas de demandes de contact.</p>
+{% endif %}
+{% endblock %}
