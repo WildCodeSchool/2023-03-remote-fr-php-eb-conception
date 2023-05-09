@@ -6,19 +6,6 @@ use App\Model\TestimonyManager;
 
 class TestimonyController extends AbstractController
 {
-    public function testimony(): string
-    {
-        $testimonyManager = new TestimonyManager();
-        $testimonies = $testimonyManager->selectAll();
-
-        return $this->twig->render('Home/testimony.html.twig', ['testimonies' => $testimonies]);
-    }
-
-    public function recep(): string
-    {
-        return $this->twig->render('Home/recep.html.twig');
-    }
-
     public function add()
     {
         $errors = [];
@@ -36,17 +23,23 @@ class TestimonyController extends AbstractController
             if (empty($testimony['message'])) {
                 $errors[] = "Le champ message est obligatoire";
             }
+            var_dump($_POST);
 
             if (empty($errors)) {
                 $testimonyManager = new TestimonyManager();
                 $testimonyManager->insert($testimony);
 
-                header('Location: /recep');
+                header('Location: /testimony/add');
                 return null;
             }
         }
         return $this->twig->render('Home/testimony.html.twig', [
             'errors' => $errors
         ]);
+    }
+
+    public function recep(): string
+    {
+        return $this->twig->render('Home/recep.html.twig');
     }
 }
