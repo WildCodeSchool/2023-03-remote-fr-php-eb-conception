@@ -12,6 +12,8 @@ return [
     'recep' => ['RecepController', 'recep'],
     'content' => ['ContentController', 'add'],
     'showContent' => ['ContentController', 'showContent'],
+    'showContact' => ['ContactController', 'showContact'],
+    'deleteContact' => ['ContactController', 'deleteContact'],
     'content/editContent' => ['ContentController', 'editContent', ['id']],
     'admin' => ['AdminController', 'login' ],
     'admin/logout' => ['AdminController', 'logout' ],
