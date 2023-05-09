@@ -1,77 +1,47 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="/assets/css/gallery.css"/>
+<link rel="stylesheet" href="/assets/css/slide.css"/>
 {% endblock %}
 
 {% block content %}
 
-	<div class="wrapper">
-		<div class="box item-1"><img src="\assets\gallery_img\menuiserie\1645456793 (1).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-1"></div>
-			<div class="overlay ovrl-right ovrl-1"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-2"><img src="\assets\gallery_img\menuiserie\1645456794.jpg" alt="">
-			<div class="overlay ovrl-left ovrl-2"></div>
-			<div class="overlay ovrl-right ovrl-2"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-3"><img src="\assets\gallery_img\menuiserie\1645456793 (3).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-3"></div>
-			<div class="overlay ovrl-right ovrl-3"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-4"><img src="\assets\gallery_img\menuiserie\1645456794 (2).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-4"></div>
-			<div class="overlay ovrl-right ovrl-4"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-5"><img src="\assets\gallery_img\menuiserie\1645456793.jpg" alt="">
-			<div class="overlay ovrl-left ovrl-5"></div>
-			<div class="overlay ovrl-right ovrl-5"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-6"><img src="\assets\gallery_img\menuiserie\1645456794 (3).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-6"></div>
-			<div class="overlay ovrl-right ovrl-6"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-7"><img src="\assets\gallery_img\menuiserie\1645456794 (5).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-7"></div>
-			<div class="overlay ovrl-right ovrl-7"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-8"><img src="\assets\gallery_img\menuiserie\1645456794 (6).jpg" alt="">
-			<div class="overlay ovrl-left ovrl-8"></div>
-			<div class="overlay ovrl-right ovrl-8"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-		<div class="box item-9"><img src="\assets\gallery_img\menuiserie\image.jpg" alt="">
-			<div class="overlay ovrl-left ovrl-9"></div>
-			<div class="overlay ovrl-right ovrl-9"></div>
-			<div class="locker">
-				<i class="arrow fa fa-arrows-h" aria-hidden="true"></i>
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-	<script language="javascript" src="\assets\js\gallery.js"></script>
-	<script language="javascript" src="\assets\js\gallery2.js"></script>
+	 <swiper-slide>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456793 (1).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456793 (2).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456793 (3).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456793.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456794 (2).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456794 (3).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456794 (4).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456794 (5).jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="\assets\gallery_img\menuiserie\1645456794 (6).jpg" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="assets\js\slide.js"></script>
+
+
 {% endblock %}
