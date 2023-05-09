@@ -32,6 +32,12 @@ class ContactController extends AbstractController
                 $errors[] = "Le champ message est obligatoire";
             }
 
+            if (empty($accessory['email'])) {
+                $errors[] = 'EMAIL is required';
+            } elseif (!filter_var($accessory['url'], FILTER_VALIDATE_EMAIL)) {
+                $errors[] = 'EMAIL is not valid';
+            }
+
             if (empty($errors)) {
                 $contactManager = new ContactManager();
                 $contactManager->insert($contact);

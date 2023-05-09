@@ -11,178 +11,159 @@
 	<div class="container">
 		<h2>Laissez votre avis !</h2>
 
-		<form method="post" action="/recep">
+		<ul>
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+
+		<form method="post">
 			<div>
 				<label for="firstname">Prenom</label>
-				<input type="text" name="Prenom" id="firstname" required>
+				<input type="text" name="first_name" id="first_name" required>
 			</div>
 			<div>
 				<label for="lastname">Nom</label>
-				<input type="text" name="Nom" id="lastname" required><br>
+				<input type="text" name="last_name" id="last_name" required><br>
 			</div>
 			<div>
 				<label for="message">Message</label>
-				<textarea message="" id="message" rows="2" required></textarea><br>
+				<textarea id="message" name="message" rows="2" required></textarea><br>
 			</div>
-			 <div class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text"></label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text"></label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text"></label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text"></label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text"></label>
-  </div>
-				<button type="submit">Envoyer</button>
+			<div class="rate">
+				<input type="radio" id="star5" name="rate" value="5"/>
+				<label for="star5" title="text"></label>
+				<input type="radio" id="star4" name="rate" value="4"/>
+				<label for="star4" title="text"></label>
+				<input type="radio" id="star3" name="rate" value="3"/>
+				<label for="star3" title="text"></label>
+				<input type="radio" id="star2" name="rate" value="2"/>
+				<label for="star2" title="text"></label>
+				<input type="radio" id="star1" name="rate" value="1"/>
+				<label for="star1" title="text"></label>
 			</div>
-		</div>
-	</form>
+			<button type="submit">Envoyer</button>
+		</form>
+	</div>
+</div>
 
 
- <section class="carousel" aria-label="Gallery">
-      <ol class="carousel__viewport">
-        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-          <div class="carousel_container-comment">
-            <h2 class="testimony_title">Nos avis !</h2>
-            <p>Prénom</p>
-            <p>Nom</p>
-            <p class="carousel_testimony">"Message"</p>
-            <div class="rate_testimony">
-              <input type="radio" id="star5" name="rate_testimony" value="5" />
-              <label for="star5" title="text"></label>
-              <input type="radio" id="star4" name="rate_testimony" value="4" />
-              <label for="star4" title="text"></label>
-              <input type="radio" id="star3" name="rate_testimony" value="3" />
-              <label for="star3" title="text"></label>
-              <input type="radio" id="star2" name="rate_testimony" value="2" />
-              <label for="star2" title="text"></label>
-              <input type="radio" id="star1" name="rate_testimony" value="1" />
-              <label for="star1" title="text"></label>
-            </div>
-          </div>
+<section class="carousel" aria-label="Gallery">
+	<ol class="carousel__viewport">
+		<li id="carousel__slide1" tabindex="0" class="carousel__slide">
+			<div class="carousel_container-comment">
+				<h2 class="testimony_title">Nos avis !</h2>
+				<p>Prénom</p>
+				<p>Nom</p>
+				<p class="carousel_testimony">"Message"</p>
+				<div class="rate_testimony">
+					<input type="radio" id="star5" name="rate_testimony" value="5"/>
+					<label for="star5" title="text"></label>
+					<input type="radio" id="star4" name="rate_testimony" value="4"/>
+					<label for="star4" title="text"></label>
+					<input type="radio" id="star3" name="rate_testimony" value="3"/>
+					<label for="star3" title="text"></label>
+					<input type="radio" id="star2" name="rate_testimony" value="2"/>
+					<label for="star2" title="text"></label>
+					<input type="radio" id="star1" name="rate_testimony" value="1"/>
+					<label for="star1" title="text"></label>
+				</div>
+			</div>
 
-          <div class="carousel__snapper">
-            <a href="#carousel__slide4" class="carousel__prev"
-              >Go to last slide</a
-            >
-            <a href="#carousel__slide2" class="carousel__next"
-              >Go to next slide</a
-            >
-          </div>
-        </li>
-        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-          <div class="carousel_container-comment">
-            <h2 class="testimony_title">Nos avis !</h2>
-            <p>Prénom</p>
-            <p>Nom</p>
-            <p class="carousel_testimony">"Message"</p>
-            <div class="rate_testimony">
-              <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text"></label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text"></label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text"></label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text"></label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text"></label>
-            </div>
+			<div class="carousel__snapper">
+				<a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+				<a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+			</div>
+		</li>
+		<li id="carousel__slide2" tabindex="0" class="carousel__slide">
+			<div class="carousel_container-comment">
+				<h2 class="testimony_title">Nos avis !</h2>
+				<p>Prénom</p>
+				<p>Nom</p>
+				<p class="carousel_testimony">"Message"</p>
+				<div class="rate_testimony">
+					<input type="radio" id="star5" name="rate" value="5"/>
+					<label for="star5" title="text"></label>
+					<input type="radio" id="star4" name="rate" value="4"/>
+					<label for="star4" title="text"></label>
+					<input type="radio" id="star3" name="rate" value="3"/>
+					<label for="star3" title="text"></label>
+					<input type="radio" id="star2" name="rate" value="2"/>
+					<label for="star2" title="text"></label>
+					<input type="radio" id="star1" name="rate" value="1"/>
+					<label for="star1" title="text"></label>
+				</div>
 
-          </div>
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide1" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide3" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-          <div class="carousel_container-comment">
-            <h2 class="testimony_title">Nos avis !</h2>
-            <p >Prénom</p>
-            <p>Nom</p>
-            <p class="carousel_testimony">"Message"</p>
-            <div class="rate_testimony">
-              <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text"></label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text"></label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text"></label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text"></label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text"></label>
-            </div>
-          </div>
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide2" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide4" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-          <div class="carousel_container-comment">
-            <h2 class="testimony_title">Nos avis !</h2>
-            <p>Prénom</p>
-            <p>Nom</p>
-            <p class="carousel_testimony">"Message"</p>
-            <div class="rate_testimony">
-              <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text"></label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text"></label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text"></label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text"></label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text"></label>
-            </div>
-          </div>
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide3" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide1" class="carousel__next"
-            >Go to first slide</a
-          >
-        </li>
-      </ol>
+			</div>
+			<div class="carousel__snapper"></div>
+			<a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+			<a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+		</li>
+		<li id="carousel__slide3" tabindex="0" class="carousel__slide">
+			<div class="carousel_container-comment">
+				<h2 class="testimony_title">Nos avis !</h2>
+				<p>Prénom</p>
+				<p>Nom</p>
+				<p class="carousel_testimony">"Message"</p>
+				<div class="rate_testimony">
+					<input type="radio" id="star5" name="rate" value="5"/>
+					<label for="star5" title="text"></label>
+					<input type="radio" id="star4" name="rate" value="4"/>
+					<label for="star4" title="text"></label>
+					<input type="radio" id="star3" name="rate" value="3"/>
+					<label for="star3" title="text"></label>
+					<input type="radio" id="star2" name="rate" value="2"/>
+					<label for="star2" title="text"></label>
+					<input type="radio" id="star1" name="rate" value="1"/>
+					<label for="star1" title="text"></label>
+				</div>
+			</div>
+			<div class="carousel__snapper"></div>
+			<a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+			<a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+		</li>
+		<li id="carousel__slide4" tabindex="0" class="carousel__slide">
+			<div class="carousel_container-comment">
+				<h2 class="testimony_title">Nos avis !</h2>
+				<p>Prénom</p>
+				<p>Nom</p>
+				<p class="carousel_testimony">"Message"</p>
+				<div class="rate_testimony">
+					<input type="radio" id="star5" name="rate" value="5"/>
+					<label for="star5" title="text"></label>
+					<input type="radio" id="star4" name="rate" value="4"/>
+					<label for="star4" title="text"></label>
+					<input type="radio" id="star3" name="rate" value="3"/>
+					<label for="star3" title="text"></label>
+					<input type="radio" id="star2" name="rate" value="2"/>
+					<label for="star2" title="text"></label>
+					<input type="radio" id="star1" name="rate" value="1"/>
+					<label for="star1" title="text"></label>
+				</div>
+			</div>
+			<div class="carousel__snapper"></div>
+			<a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+			<a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+		</li>
+	</ol>
 
-      <aside class="carousel__navigation">
-        <ol class="carousel__navigation-list">
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide1" class="carousel__navigation-button"
-              >Go to slide 1</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide2" class="carousel__navigation-button"
-              >Go to slide 2</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide3" class="carousel__navigation-button"
-              >Go to slide 3</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide4" class="carousel__navigation-button"
-              >Go to slide 4</a
-            >
-          </li>
-        </ol>
-      </aside>
-    </section>
+	<aside class="carousel__navigation">
+		<ol class="carousel__navigation-list">
+			<li class="carousel__navigation-item">
+				<a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+			</li>
+			<li class="carousel__navigation-item">
+				<a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+			</li>
+			<li class="carousel__navigation-item">
+				<a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+			</li>
+			<li class="carousel__navigation-item">
+				<a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+			</li>
+		</ol>
+	</aside>
+</section>
 
 
-	{% include 'Include/_navbar.html.twig' %}
-{% endblock %}
+{% include 'Include/_navbar.html.twig' %}{% endblock %}

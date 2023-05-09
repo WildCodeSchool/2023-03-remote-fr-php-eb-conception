@@ -13,296 +13,284 @@
 {% block content %}
 
 
+	<div
+		class="swiper">
+		<!-- Additional required wrapper -->
 		<div
-			class="swiper">
-			<!-- Additional required wrapper -->
-			<div
-				class="swiper-wrapper">
-				<!-- Slides -->
-				<div class="swiper-slide">
-					<section class="mainPage">
+			class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<section class="mainPage">
 
-						<div class="titleContainer">
-							<h1 class="title">EB CONCEPTION</h1>
-						</div>
+					<div class="titleContainer">
+						<h1 class="title">EB CONCEPTION</h1>
+					</div>
 
-						<div class="logoContainer">
-							<a href="https://www.facebook.com/">
-								<img class="logo fb" src="/assets/imgs/fb_logo.png" alt="logo facebook">
-							</a>
-							<a href="https://www.twitter.com/">
-								<img class="logo twitter" src="/assets/imgs/twitter_logo.png" alt="logo twitter">
-							</a>
-						</div>
+					<div class="logoContainer">
+						<a href="https://www.facebook.com/" target="_blank">
+							<img class="logo fb" src="/assets/imgs/fb_logo.png" alt="logo facebook">
+						</a>
+						<a href="https://www.twitter.com/" target="_blank">
+							<img class="logo twitter" src="/assets/imgs/twitter_logo.png" alt="logo twitter">
+						</a>
+					</div>
 
-						<!-- Swiper-home -->
-						<div class="swiper1 mySwiper-home">
-							<div class="swiper-wrapper">
+					<!-- Swiper-home -->
+					<div class="swiper1 mySwiper-home">
+						<div class="swiper-wrapper">
+							{% for testimony in testimonies %}
 								<div class="swiper-slide slide-swiper">
-									<h3 class="swiper-title-home">Emilienne</h3>
+									<h3 class="swiper-title-home">{{ testimony.first_name }}
+										{{ testimony.last_name }}</h3>
 									<p class="swiper-comment-home">
-										<b>"</b>Christophe est à l'écoute des clients, très disponible et très sérieux.<b>"</b>
+										<b>"</b>
+										{{ testimony.message }}<b>"</b>
 									</p>
 								</div>
-								<div class="swiper-slide slide-swiper">
-									<h3 class="swiper-title-home">Maurice</h3>
-									<p class="swiper-comment-home">
-										<b>"</b>Je recommande EB Conception. Christophe s'adapte à la demande des clients.<b>"</b>
-									</p>
-								</div>
-								<div class="swiper-slide slide-swiper">
-									<h3 class="swiper-title-home">Raymonde</h3>
-									<p class="swiper-comment-home">
-										<b>"</b>Très professionnel, les délais du chantier ont été respectés. Les finitions sont parfaites.<b>"</b>
-									</p>
-								</div>
-							</div>
-							<div class="swiper-scrollbar"></div>
+							{% endfor %}
 						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
 
-					</section>
-				</div>
+				</section>
+			</div>
 
-				<div class="swiper-slide">
-					<section class="menuiserie" aria-label="Ménuiserie" id="menuiserie">
+			<div class="swiper-slide">
+				<section class="menuiserie" aria-label="Ménuiserie" id="menuiserie">
 
-						<div class="subtitleContainer layout1">
-							<h2>
-								Ménuiserie
-							</h2>
-						</div>
+					<div class="subtitleContainer layout1">
+						<h2>
+							Ménuiserie
+						</h2>
+					</div>
 
-						<div class="boldTextContainer layout1">
-							<p>
-								{{ carpentry.bold_text }}
-							</p>
-						</div>
+					<div class="boldTextContainer layout1">
+						<p>
+							{{ carpentry.bold_text }}
+						</p>
+					</div>
 
-						<div class="colouredTextContainer layout1">
-							{{ carpentry.coloured_text }}
-						</div>
+					<div class="colouredTextContainer layout1">
+						{{ carpentry.coloured_text }}
+					</div>
 
-						<div class="descriptionContainer layout1">
-							<p class="description">
-								{{ carpentry.main_content|raw }}
-							</p>
-						</div>
+					<div class="descriptionContainer layout1">
+						<p class="description">
+							{{ carpentry.main_content|raw }}
+						</p>
+					</div>
 
-						<div class="mainImgContainer layout1">
-							<img src="/uploads/{{ carpentry.main_img }}" alt="">
-						</div>
+					<div class="mainImgContainer layout1">
+						<img src="/uploads/{{ carpentry.main_img }}" alt="">
+					</div>
 
-						<div class="secondaryImgContainer layout1">
-							<img src="/uploads/{{ carpentry.secondary_img }}" alt="">
+					<div class="secondaryImgContainer layout1">
+						<img src="/uploads/{{ carpentry.secondary_img }}" alt="">
 
-						</div>
+					</div>
 
-						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="/galleryM">Galerie...</a>
-						</div>
+					<div class="galeryLinkContainer layout1">
+						<a class="galeryLink" href="/galleryM">Galerie...</a>
+					</div>
 
-					</section>
-				</div>
+				</section>
+			</div>
 
-				<div class="swiper-slide">
+			<div class="swiper-slide">
 
-					<section class="escalier" aria-label="Éscalier" id="escalier">
+				<section class="escalier" aria-label="Éscalier" id="escalier">
 
-						<div class="subtitleContainer layout2">
-							<h2>
-								Éscalier
-							</h2>
-						</div>
+					<div class="subtitleContainer layout2">
+						<h2>
+							Éscalier
+						</h2>
+					</div>
 
-						<div class="boldTextContainer layout2">
-							<p>
-								{{ stairs.bold_text }}
-							</p>
-						</div>
+					<div class="boldTextContainer layout2">
+						<p>
+							{{ stairs.bold_text }}
+						</p>
+					</div>
 
-						<div class="colouredTextContainer layout2">
-							{{ stairs.coloured_text }}
-						</div>
+					<div class="colouredTextContainer layout2">
+						{{ stairs.coloured_text }}
+					</div>
 
-						<div class="descriptionContainer layout2">
-							<p>
-								{{ carpentry.main_content|raw }}
-							</p>
-						</div>
+					<div class="descriptionContainer layout2">
+						<p>
+							{{ carpentry.main_content|raw }}
+						</p>
+					</div>
 
-						<div class="mainImgContainer layout2">
-							<img src="/uploads/{{ stairs.main_img }}" alt="">
-						</div>
+					<div class="mainImgContainer layout2">
+						<img src="/uploads/{{ stairs.main_img }}" alt="">
+					</div>
 
-						<div class="secondaryImgContainer layout2">
-							<img src="/uploads/{{ stairs.secondary_img }}" alt="">
+					<div class="secondaryImgContainer layout2">
+						<img src="/uploads/{{ stairs.secondary_img }}" alt="">
 
-						</div>
+					</div>
 
-						<div class="galeryLinkContainer layout2">
-							<a class="galeryLink" href="">Galerie...</a>
-						</div>
+					<div class="galeryLinkContainer layout2">
+						<a class="galeryLink" href="">Galerie...</a>
+					</div>
 
-						<div class="backgroundBox1 layout2"></div>
+					<div class="backgroundBox1 layout2"></div>
 
-						<div class="backgroundBox2 layout2"></div>
+					<div class="backgroundBox2 layout2"></div>
 
-						<div class="highlightBox1 layout2"></div>
+					<div class="highlightBox1 layout2"></div>
 
-						<div class="highlightBox2 layout2"></div>
+					<div class="highlightBox2 layout2"></div>
 
-					</section>
-				</div>
+				</section>
+			</div>
 
-				<div class="swiper-slide">
+			<div class="swiper-slide">
 
-					<section class="exterieur" aria-label="Extérieur" id="exterieur">
+				<section class="exterieur" aria-label="Extérieur" id="exterieur">
 
-						<div class="subtitleContainer layout1">
-							<h2>
-								Extérieur
-							</h2>
-						</div>
-
-						<div class="boldTextContainer layout1">
-							<p>
-								{{ exterior.bold_text }}
-							</p>
-						</div>
-
-						<div class="colouredTextContainer layout1">
-							{{ exterior.coloured_text }}
-						</div>
-
-						<div class="descriptionContainer layout1">
-							<p>
-								{{ exterior.main_content|raw }}
-							</p>
-						</div>
-
-						<div class="mainImgContainer layout1">
-							<img src="/uploads/{{ exterior.main_img }}" alt="">
-						</div>
-
-						<div class="secondaryImgContainer layout1">
-							<img src="/uploads/{{ exterior.secondary_img }}" alt="">
-
-						</div>
-
-						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="/galleryE">Galerie...</a>
-						</div>
-
-					</section>
-
-				</div>
-
-				<div class="swiper-slide">
-
-					<section class="ebenisterie" aria-label="Ébénisterie" id="ebenisterie">
-
-						<div class="subtitleContainer layout2">
-							<h2>
-								Ébénisterie
-							</h2>
-						</div>
-
-						<div class="boldTextContainer layout2">
-							<p>
-								{{ cabinetMaking.bold_text }}
-							</p>
-						</div>
-
-						<div class="colouredTextContainer layout2">
-							{{ cabinetMaking.coloured_text }}
-						</div>
-
-						<div class="descriptionContainer layout2">
-							<p>
-								{{ cabinetMaking.main_content|raw }}
-							</p>
-						</div>
-
-						<div class="mainImgContainer layout2">
-							<img src="/uploads/{{ cabinetMaking.main_img }}" alt="">
-						</div>
-
-						<div class="secondaryImgContainer layout2">
-							<img src="/uploads/{{ cabinetMaking.secondary_img }}" alt="">
-						</div>
-
-						<div class="galeryLinkContainer layout2">
-							<a class="galeryLink" href="">Galerie...</a>
-						</div>
-
-						<div class="backgroundBox1 layout2"></div>
-
-						<div class="backgroundBox2 layout2"></div>
-
-						<div class="highlightBox1 layout2"></div>
-
-						<div class="highlightBox2 layout2"></div>
-
-					</section>
-
-				</div>
-				<div class="swiper-slide">
-
-					<section class="agencement" aria-label="Agencement" id="agencement">
-
-						<div class="subtitleContainer layout1">
-							<h2>
-								Agencement
-							</h2>
-						</div>
-
-						<div class="boldTextContainer layout1">
-							<p>
-								{{ layout.bold_text }}
-							</p>
-						</div>
-
-						<div class="colouredTextContainer layout1">
-							{{ layout.coloured_text }}
-						</div>
-
-						<div class="descriptionContainer layout1">
-							<p>
-								{{ layout.main_content|raw }}																																																																																																																																																																	 deserunt mollit anim id est laborum.
-							</p>
-						</div>
-
-						<div class="mainImgContainer layout1">
-							<img src="/uploads/{{ layout.main_img }}" alt="">
-						</div>
-
-						<div class="secondaryImgContainer layout1">
-							<img src="/uploads/{{ layout.secondary_img }}" alt="">
-
-						</div>
-
-						<div class="galeryLinkContainer layout1">
-							<a class="galeryLink" href="/galleryA">Galerie...</a>
-						</div>
-
-					</section>
-
-				</div>
+					<div class="subtitleContainer layout1">
+						<h2>
+							Extérieur
+						</h2>
+					</div>
+
+					<div class="boldTextContainer layout1">
+						<p>
+							{{ exterior.bold_text }}
+						</p>
+					</div>
+
+					<div class="colouredTextContainer layout1">
+						{{ exterior.coloured_text }}
+					</div>
+
+					<div class="descriptionContainer layout1">
+						<p>
+							{{ exterior.main_content|raw }}
+						</p>
+					</div>
+
+					<div class="mainImgContainer layout1">
+						<img src="/uploads/{{ exterior.main_img }}" alt="">
+					</div>
+
+					<div class="secondaryImgContainer layout1">
+						<img src="/uploads/{{ exterior.secondary_img }}" alt="">
+
+					</div>
+
+					<div class="galeryLinkContainer layout1">
+						<a class="galeryLink" href="/galleryE">Galerie...</a>
+					</div>
+
+				</section>
 
 			</div>
-			<!-- If we need pagination -->
-			<div class="swiper-pagination"></div>
 
-			<!-- If we need navigation buttons -->
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper-slide">
 
-			<!-- If we need scrollbar -->
-			<div class="swiper-scrollbar"></div>
+				<section class="ebenisterie" aria-label="Ébénisterie" id="ebenisterie">
+
+					<div class="subtitleContainer layout2">
+						<h2>
+							Ébénisterie
+						</h2>
+					</div>
+
+					<div class="boldTextContainer layout2">
+						<p>
+							{{ cabinetMaking.bold_text }}
+						</p>
+					</div>
+
+					<div class="colouredTextContainer layout2">
+						{{ cabinetMaking.coloured_text }}
+					</div>
+
+					<div class="descriptionContainer layout2">
+						<p>
+							{{ cabinetMaking.main_content|raw }}
+						</p>
+					</div>
+
+					<div class="mainImgContainer layout2">
+						<img src="/uploads/{{ cabinetMaking.main_img }}" alt="">
+					</div>
+
+					<div class="secondaryImgContainer layout2">
+						<img src="/uploads/{{ cabinetMaking.secondary_img }}" alt="">
+					</div>
+
+					<div class="galeryLinkContainer layout2">
+						<a class="galeryLink" href="">Galerie...</a>
+					</div>
+
+					<div class="backgroundBox1 layout2"></div>
+
+					<div class="backgroundBox2 layout2"></div>
+
+					<div class="highlightBox1 layout2"></div>
+
+					<div class="highlightBox2 layout2"></div>
+
+				</section>
+
+			</div>
+			<div class="swiper-slide">
+
+				<section class="agencement" aria-label="Agencement" id="agencement">
+
+					<div class="subtitleContainer layout1">
+						<h2>
+							Agencement
+						</h2>
+					</div>
+
+					<div class="boldTextContainer layout1">
+						<p>
+							{{ layout.bold_text }}
+						</p>
+					</div>
+
+					<div class="colouredTextContainer layout1">
+						{{ layout.coloured_text }}
+					</div>
+
+					<div class="descriptionContainer layout1">
+						<p>
+							{{ layout.main_content|raw }}
+							deserunt mollit anim id est laborum.
+						</p>
+					</div>
+
+					<div class="mainImgContainer layout1">
+						<img src="/uploads/{{ layout.main_img }}" alt="">
+					</div>
+
+					<div class="secondaryImgContainer layout1">
+						<img src="/uploads/{{ layout.secondary_img }}" alt="">
+
+					</div>
+
+					<div class="galeryLinkContainer layout1">
+						<a class="galeryLink" href="/galleryA">Galerie...</a>
+					</div>
+
+				</section>
+
+			</div>
+
 		</div>
-	</div>
-</main>{% endblock %}{% block javascript %}
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="/assets/js/scriptSwiperIndex.js"></script>
-<script src="/assets/js/carrousel_home.js"></script>{% endblock %}
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+</div></main>{% endblock %}{% block javascript %}<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script src="/assets/js/scriptSwiperIndex.js"></script><script src="/assets/js/carrousel_home.js"></script>{% endblock %}
