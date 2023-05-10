@@ -24,18 +24,14 @@ class ContactController extends AbstractController
                 $errors[] = "Le champ nom est obligatoire";
             }
 
-            if (empty($contact['email'])) {
-                $errors[] = "Le champ email est obligatoire";
-            }
-
             if (empty($contact['message'])) {
                 $errors[] = "Le champ message est obligatoire";
             }
 
             if (empty($contact['email'])) {
-                $errors[] = 'EMAIL is required';
+                $errors[] = 'Le champ email est obligatoire';
             } elseif (!filter_var($contact['email'], FILTER_VALIDATE_EMAIL)) {
-                $errors[] = 'EMAIL is not valid';
+                $errors[] = 'Le champ email n\'est pas valide';
             }
 
             if (empty($errors)) {
