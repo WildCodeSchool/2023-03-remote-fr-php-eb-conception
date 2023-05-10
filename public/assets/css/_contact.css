@@ -1,3 +1,8 @@
+ul.errors {
+    color: var(--beige);
+    text-align: center;
+    list-style-type: none;
+}
 
 /* Main container */
 
